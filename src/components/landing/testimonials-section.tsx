@@ -2,6 +2,13 @@
 import React from 'react';
 import { Star } from 'lucide-react';
 import CTAButton from '../ui-custom/cta-button';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -21,6 +28,24 @@ const testimonials = [
     role: "Parent (Yr 4 Student)",
     comment: "My son enjoys the instant feedback. He's motivated to keep improving because he can see his progress right away.",
     stars: 5
+  },
+  {
+    name: "Sarah",
+    role: "Year 6 Student",
+    comment: "The practice exams are just like the real ones! I feel so much more confident about the actual test now.",
+    stars: 5
+  },
+  {
+    name: "Raj",
+    role: "Parent (Yr 5 Student)",
+    comment: "We tried many programs before, but Everest's AI feedback is on another level. My son's writing scores improved within weeks!",
+    stars: 5
+  },
+  {
+    name: "Emily",
+    role: "Year 4 Student",
+    comment: "I love how the system explains my mistakes. It's like having a tutor available whenever I need help!",
+    stars: 5
   }
 ];
 
@@ -37,31 +62,46 @@ const TestimonialsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-xl p-8 shadow-lg border border-gray-100"
-            >
-              <div className="flex mb-4">
-                {[...Array(testimonial.stars)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-6 italic">
-                "{testimonial.comment}"
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-everest-blue/20 rounded-full flex items-center justify-center text-everest-blue font-bold">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div className="ml-3">
-                  <p className="font-semibold text-gray-800">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
-                </div>
-              </div>
+        <div className="max-w-6xl mx-auto">
+          <Carousel 
+            opts={{
+              align: "start",
+              loop: true,
+              dragFree: true,
+              duration: 40,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="h-full bg-white rounded-xl p-8 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div className="flex mb-4">
+                      {[...Array(testimonial.stars)].map((_, i) => (
+                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-6 italic h-24 overflow-hidden">
+                      "{testimonial.comment}"
+                    </p>
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 bg-everest-blue/20 rounded-full flex items-center justify-center text-everest-blue font-bold">
+                        {testimonial.name.charAt(0)}
+                      </div>
+                      <div className="ml-3">
+                        <p className="font-semibold text-gray-800">{testimonial.name}</p>
+                        <p className="text-sm text-gray-500">{testimonial.role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center mt-8">
+              <CarouselPrevious className="relative static left-0 right-auto mr-2 translate-y-0" />
+              <CarouselNext className="relative static right-0 left-auto ml-2 translate-y-0" />
             </div>
-          ))}
+          </Carousel>
         </div>
         
         <div className="text-center mt-14">
@@ -78,6 +118,17 @@ const TestimonialsSection = () => {
           </CTAButton>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes autoScroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      `}</style>
     </section>
   );
 };
