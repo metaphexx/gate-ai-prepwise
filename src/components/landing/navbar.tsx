@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import CTAButton from '../ui-custom/cta-button';
 import { Menu, X } from 'lucide-react';
@@ -39,7 +38,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="/" className={`font-bold text-2xl ${isScrolled ? 'text-everest-purple' : 'text-white'}`}>
+            <a href="/" className={`font-bold text-2xl ${isScrolled ? 'text-everest-blue' : 'text-white'}`}>
               Everest GATE
             </a>
           </div>

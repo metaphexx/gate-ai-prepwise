@@ -20,8 +20,8 @@ const CTAButton = ({
       className={cn(
         'rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1',
         variant === 'primary' 
-          ? 'bg-everest-purple text-white hover:bg-everest-purple/90' 
-          : 'bg-white text-everest-purple border border-everest-purple hover:bg-gray-50',
+          ? 'bg-everest-blue text-white hover:bg-everest-blue/90' 
+          : 'bg-white text-everest-blue border border-everest-blue hover:bg-gray-50',
         size === 'default' ? 'px-6 py-3 text-sm' : 'px-8 py-4 text-base',
         className
       )}

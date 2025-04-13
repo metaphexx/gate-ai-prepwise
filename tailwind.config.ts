@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,11 +62,10 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for the landing page
 				everest: {
 					purple: '#6b46c1',
 					'light-purple': '#9b87f5',
-					blue: '#3182ce',
+					blue: '#009dff',
 					'light-blue': '#63b3ed',
 					gray: '#4a5568',
 					'light-gray': '#e2e8f0'
@@ -113,7 +111,8 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'hero-pattern': 'linear-gradient(to right, #6b46c1, #3182ce)'
+				'hero-pattern': 'linear-gradient(to right, #6b46c1, #3182ce)',
+				'hero-blue-gradient': 'linear-gradient(135deg, #009dff 0%, #3182ce 100%)'
 			}
 		}
 	},

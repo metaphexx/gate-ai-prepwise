@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CTAButton from '../ui-custom/cta-button';
 import { ArrowRight, Brain } from 'lucide-react';
@@ -12,7 +11,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="hero-gradient text-white py-20 md:py-28">
+    <section className="bg-hero-blue-gradient text-white py-20 md:py-28">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 mb-10 md:mb-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
