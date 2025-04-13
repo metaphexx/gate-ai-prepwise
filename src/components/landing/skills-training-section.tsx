@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { LineChart, Brain, CheckCircle2, Clock } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,7 +8,23 @@ const SkillsTrainingSection = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Left side - Content */}
+          {/* Swapped: Screenshots now on the left */}
+          <div className="lg:w-1/2">
+            <Card className="border-none shadow-none">
+              <CardContent className="p-0">
+                <div className="dashboard-screenshot rounded-xl shadow-md overflow-hidden relative z-10 cursor-pointer">
+                  <img 
+                    src="/lovable-uploads/468bf987-2aec-49af-93ce-48f54b742500.png" 
+                    alt="Skills Training Interface" 
+                    className="w-full h-auto"
+                  />
+                  <div className="rainbow-border"></div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Swapped: Content now on the right */}
           <div className="lg:w-1/2">
             <div className="mb-6">
               <span className="bg-everest-blue/10 text-everest-blue px-4 py-1 rounded-full text-sm font-medium flex items-center w-fit">
@@ -46,22 +63,6 @@ const SkillsTrainingSection = () => {
                 </p>
               </div>
             </div>
-          </div>
-
-          {/* Right side - Screenshots */}
-          <div className="lg:w-1/2">
-            <Card className="border-none shadow-none">
-              <CardContent className="p-0">
-                <div className="dashboard-screenshot rounded-xl shadow-md overflow-hidden relative z-10 cursor-pointer">
-                  <img 
-                    src="/lovable-uploads/468bf987-2aec-49af-93ce-48f54b742500.png" 
-                    alt="Skills Training Interface" 
-                    className="w-full h-auto"
-                  />
-                  <div className="rainbow-border"></div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
