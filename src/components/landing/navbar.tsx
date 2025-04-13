@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import CTAButton from '../ui-custom/cta-button';
 import { Menu, X, LogIn, UserRound } from 'lucide-react';
@@ -40,7 +39,6 @@ const Navbar = () => {
   };
 
   const handleLogin = () => {
-    // For demo purposes, just toggle login state
     setIsLoggedIn(!isLoggedIn);
   };
 
@@ -59,7 +57,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <a href="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/everest-tutoring-logo.png" 
+                src="lovable-uploads/everest-tutoring-logo.png" 
                 alt="Everest Tutoring Logo" 
                 className="h-10 w-auto object-contain"
                 onError={(e) => {
@@ -148,7 +146,6 @@ const Navbar = () => {
         </div>
       </div>
       
-      {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white shadow-lg py-4">
           <nav className="container mx-auto px-4">
