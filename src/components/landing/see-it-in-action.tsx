@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Play } from 'lucide-react';
+import { Play, Video } from 'lucide-react';
 
 const SeeItInAction = () => {
   return <section className="py-20 bg-gray-50">
@@ -9,6 +9,12 @@ const SeeItInAction = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Left side - Content */}
             <div className="lg:w-1/2">
+              <div className="mb-6">
+                <span className="bg-everest-blue/10 text-everest-blue px-4 py-1 rounded-full text-sm font-medium flex items-center w-fit">
+                  <Video className="h-4 w-4 mr-1.5" />
+                  Watch It Happen Before Your Eyes
+                </span>
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">See It In Action!</h2>
               <p className="text-lg text-gray-600 mb-8">Watch how our Writing AI Tool marks your writing, corrects your errors, rewrites your text for you & gives you an exemplar answer!</p>
               
@@ -43,6 +49,15 @@ const SeeItInAction = () => {
                       <p className="text-gray-600">View your own text rewritten & how an expert writes a response!</p>
                     </div>
                   </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 bg-amber-50 p-4 rounded-lg border border-amber-100">
+                <div className="flex items-start">
+                  <Play className="text-amber-500 h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
+                  <p className="text-amber-800 text-sm">
+                    <span className="font-medium">Created by our team of expert writers and educators.</span>
+                  </p>
                 </div>
               </div>
             </div>
