@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { CheckCircle2, Brain, Target } from 'lucide-react';
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
@@ -114,7 +115,7 @@ const FeatureShowcase = () => {
         .rainbow-border {
           position: absolute;
           inset: 0;
-          border: 5px solid transparent;
+          border: 7px solid transparent;
           border-radius: 0.75rem;
           background: linear-gradient(90deg, #8B5CF6, #D946EF, #F97316, #0EA5E9, #33C3F0, #8B5CF6) border-box;
           -webkit-mask: 
@@ -135,7 +136,7 @@ const FeatureShowcase = () => {
             background-position: 400% 50%;
           }
         }
-      `}} />
+      ` }} />
     </section>
   );
 };
