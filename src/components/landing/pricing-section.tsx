@@ -48,7 +48,7 @@ const PricingSection = () => {
                   </li>
                   <li className="flex items-start">
                     <X className="h-5 w-5 text-gray-300 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-400">Access to New Released Questions</span>
+                    <span className="text-gray-400">Access to Newly Released Questions</span>
                   </li>
                 </ul>
               </div>
