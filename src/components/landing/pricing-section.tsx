@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check, X } from 'lucide-react';
 import CTAButton from '../ui-custom/cta-button';
@@ -72,8 +71,8 @@ const PricingSection = () => {
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-1">Premium Plan</h3>
               <div className="flex items-baseline mb-2">
-                <span className="text-5xl font-bold">$14.99</span>
-                <span className="ml-2 text-gray-600">per month</span>
+                <span className="text-5xl font-bold">$9.69</span>
+                <span className="ml-2 text-gray-600">per week, billed monthly</span>
               </div>
               <p className="text-gray-600 mb-6">Everything you need for GATE success.</p>
               
