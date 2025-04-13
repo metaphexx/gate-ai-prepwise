@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Target, CheckCircle2 } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
@@ -55,10 +54,10 @@ const ExamSimulationSection = () => {
               ))}
             </ul>
             
-            <div className="mt-8 bg-amber-50 p-4 rounded-lg border border-amber-100">
+            <div className="mt-8 bg-blue-50 p-4 rounded-lg border border-blue-100">
               <div className="flex items-start">
-                <Target className="text-amber-500 h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
-                <p className="text-amber-800 text-sm">
+                <Target className="text-everest-blue h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
+                <p className="text-blue-800 text-sm">
                   <span className="font-medium">Bonus:</span> Get feedback within seconds — no manual marking required.
                 </p>
               </div>
