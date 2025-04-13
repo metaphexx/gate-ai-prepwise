@@ -7,6 +7,7 @@ import FeatureShowcase from '../components/landing/feature-showcase';
 import ExamSimulationSection from '../components/landing/exam-simulation-section';
 import SkillsTrainingSection from '../components/landing/skills-training-section';
 import FeaturesSection from '../components/landing/features-section';
+import SeeItInAction from '../components/landing/see-it-in-action';
 import PricingSection from '../components/landing/pricing-section';
 import TestimonialsSection from '../components/landing/testimonials-section';
 import TrustSignals from '../components/landing/trust-signals';
@@ -51,6 +52,7 @@ const Index = () => {
       <ExamSimulationSection />
       <SkillsTrainingSection />
       <FeaturesSection />
+      <SeeItInAction />
       <PricingSection />
       <TrustSignals />
       <TestimonialsSection />
