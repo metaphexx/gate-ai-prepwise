@@ -31,7 +31,7 @@ const HeroSection = () => {
             </CTAButton>
             <CTAButton variant="secondary" size="lg" onClick={() => scrollToElement('how-it-works')}>
               <span className="flex items-center justify-center">
-                See How It Works <ArrowRight className="ml-2 h-4 w-4" />
+                See How It Works
               </span>
             </CTAButton>
           </div>

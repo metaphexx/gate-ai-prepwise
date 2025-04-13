@@ -38,7 +38,9 @@ const CTAButton = ({
         )}
         {...props}
       >
-        {children}
+        <div className="flex flex-col items-center justify-center">
+          {children}
+        </div>
         {variant === 'secondary' && <ArrowRight className="ml-2 h-4 w-4" />}
       </button>
     </div>
@@ -46,4 +48,3 @@ const CTAButton = ({
 };
 
 export default CTAButton;
-
