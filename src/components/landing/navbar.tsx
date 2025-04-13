@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import CTAButton from '../ui-custom/cta-button';
 import { Menu, X } from 'lucide-react';
@@ -38,13 +39,13 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="/" className={`font-bold text-2xl ${isScrolled ? 'text-everest-blue' : 'text-white'}`}>
+            <a href="/" className="font-bold text-2xl text-everest-blue">
               Everest GATE
             </a>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <nav className={`${isScrolled ? 'text-gray-700' : 'text-white'}`}>
+            <nav className="text-gray-700">
               <ul className="flex space-x-8">
                 <li>
                   <button 
@@ -77,8 +78,8 @@ const Navbar = () => {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? 
-              <X className={`h-6 w-6 ${isScrolled ? 'text-gray-800' : 'text-white'}`} /> : 
-              <Menu className={`h-6 w-6 ${isScrolled ? 'text-gray-800' : 'text-white'}`} />
+              <X className="h-6 w-6 text-gray-800" /> : 
+              <Menu className="h-6 w-6 text-gray-800" />
             }
           </button>
         </div>
