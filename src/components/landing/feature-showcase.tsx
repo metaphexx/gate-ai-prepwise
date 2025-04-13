@@ -1,23 +1,61 @@
 
 import React from 'react';
 import { Check, Brain, Target } from 'lucide-react';
+import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
 const FeatureShowcase = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
-          {/* Right side - Screenshot */}
+          {/* Right side - Screenshots */}
           <div className="lg:w-1/2">
-            <div className="relative">
-              <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-100">
-                <img 
-                  src="/lovable-uploads/379d2202-22a4-4679-a5e9-a22a4956687b.png" 
-                  alt="Everest Tutoring Question Bank Interface" 
-                  className="w-full h-auto"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-everest-purple/10 to-everest-blue/10 rounded-xl -z-10 transform translate-x-4 translate-y-4"></div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { 
+                  src: "/lovable-uploads/29817a2b-e73b-4bdc-8fda-80a39e500329.png", 
+                  alt: "Abstract Reasoning Question",
+                  title: "Abstract Reasoning",
+                  description: "Pattern recognition questions to test your logical thinking skills"
+                },
+                { 
+                  src: "/lovable-uploads/e18084dc-f40e-426b-a44d-6ff487f2ea6e.png", 
+                  alt: "Writing Test Interface",
+                  title: "Writing Test",
+                  description: "Essay prompts with AI-powered feedback and marking"
+                },
+                { 
+                  src: "/lovable-uploads/39f0a993-6974-400e-af4e-d125bd10c335.png", 
+                  alt: "Reading Comprehension Test",
+                  title: "Reading Comprehension",
+                  description: "Passages and questions to assess your understanding"
+                },
+                { 
+                  src: "/lovable-uploads/409c5f51-d2c5-4a70-8931-068530c33435.png", 
+                  alt: "Quantitative Reasoning Problem",
+                  title: "Quantitative Reasoning",
+                  description: "Math problems to evaluate your numerical skills"
+                }
+              ].map((screenshot, index) => (
+                <HoverCard key={index}>
+                  <HoverCardTrigger asChild>
+                    <div className="dashboard-screenshot rounded-xl shadow-md overflow-hidden relative z-10 cursor-pointer border border-gray-100">
+                      <img 
+                        src={screenshot.src} 
+                        alt={screenshot.alt} 
+                        className="w-full h-auto"
+                      />
+                      <div className="rainbow-border"></div>
+                    </div>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-80">
+                    <div className="space-y-2">
+                      <h4 className="text-sm font-semibold">{screenshot.title}</h4>
+                      <p className="text-sm text-gray-600">{screenshot.description}</p>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
+              ))}
             </div>
           </div>
 
@@ -64,6 +102,34 @@ const FeatureShowcase = () => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .dashboard-screenshot {
+          position: relative;
+          transform: scale(1);
+          transition: transform 0.3s ease;
+        }
+        
+        .dashboard-screenshot:hover {
+          transform: scale(1.05);
+        }
+        
+        .rainbow-border {
+          position: absolute;
+          inset: 0;
+          border: 3px solid transparent;
+          border-radius: 0.75rem;
+          background: linear-gradient(90deg, #8B5CF6, #D946EF, #F97316, #0EA5E9, #33C3F0, #8B5CF6) border-box;
+          -webkit-mask: 
+            linear-gradient(#fff 0 0) padding-box, 
+            linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          background-size: 400% 100%;
+          animation: rainbow-animation 6s linear infinite;
+          pointer-events: none;
+        }
+      `}</style>
     </section>
   );
 };
