@@ -4,6 +4,8 @@ import Navbar from '../components/landing/navbar';
 import HeroSection from '../components/landing/hero-section';
 import HowItWorks from '../components/landing/how-it-works';
 import FeatureShowcase from '../components/landing/feature-showcase';
+import ExamSimulationSection from '../components/landing/exam-simulation-section';
+import SkillsTrainingSection from '../components/landing/skills-training-section';
 import FeaturesSection from '../components/landing/features-section';
 import PricingSection from '../components/landing/pricing-section';
 import TestimonialsSection from '../components/landing/testimonials-section';
@@ -46,6 +48,8 @@ const Index = () => {
       <HeroSection />
       <HowItWorks />
       <FeatureShowcase />
+      <ExamSimulationSection />
+      <SkillsTrainingSection />
       <FeaturesSection />
       <PricingSection />
       <TrustSignals />
