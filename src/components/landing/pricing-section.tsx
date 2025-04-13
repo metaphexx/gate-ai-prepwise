@@ -6,20 +6,20 @@ import { Card, CardContent } from '../ui/card';
 
 const PricingSection = () => {
   return (
-    <section id="pricing" className="py-20 bg-gray-50">
+    <section id="pricing" className="py-20 bg-[#009dff]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Start Free. Upgrade Anytime.
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-white/90 max-w-3xl mx-auto">
             Choose the plan that works best for your preparation needs
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Free Plan Card */}
-          <Card className="border shadow-md overflow-hidden">
+          <Card className="border-0 shadow-lg overflow-hidden rounded-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-1">Free Plan</h3>
               <div className="flex items-baseline mb-2">
@@ -63,9 +63,9 @@ const PricingSection = () => {
           </Card>
           
           {/* Premium Plan Card */}
-          <Card className="border shadow-md overflow-hidden bg-blue-50 relative">
+          <Card className="border-0 shadow-lg overflow-hidden rounded-2xl bg-white relative transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div className="absolute top-0 right-0">
-              <div className="bg-blue-500 text-white px-4 py-1 text-xs font-semibold uppercase rounded-bl-lg">
+              <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 text-xs font-semibold uppercase rounded-bl-lg">
                 RECOMMENDED
               </div>
             </div>
@@ -107,7 +107,12 @@ const PricingSection = () => {
                 </ul>
               </div>
               
-              <CTAButton className="w-full bg-blue-500 hover:bg-blue-600 text-white">Go Premium</CTAButton>
+              <CTAButton 
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+                variant="primary"
+              >
+                Go Premium
+              </CTAButton>
             </div>
           </Card>
         </div>
