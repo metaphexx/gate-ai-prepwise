@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Play, Video } from 'lucide-react';
 
@@ -7,7 +6,6 @@ const SeeItInAction = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            {/* Left side - Content */}
             <div className="lg:w-1/2">
               <div className="mb-6">
                 <span className="bg-everest-blue/10 text-everest-blue px-4 py-1 rounded-full text-sm font-medium flex items-center w-fit">
@@ -52,17 +50,16 @@ const SeeItInAction = () => {
                 </div>
               </div>
               
-              <div className="mt-8 bg-amber-50 p-4 rounded-lg border border-amber-100">
+              <div className="mt-8 bg-everest-blue/10 p-4 rounded-lg border border-everest-blue/20">
                 <div className="flex items-start">
-                  <Play className="text-amber-500 h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
-                  <p className="text-amber-800 text-sm">
+                  <Play className="text-everest-blue h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
+                  <p className="text-everest-blue text-sm">
                     <span className="font-medium">Created by our team of expert writers and educators.</span>
                   </p>
                 </div>
               </div>
             </div>
             
-            {/* Right side - Video placeholder with rainbow border */}
             <div className="lg:w-1/2 mt-10 lg:mt-0">
               <div className="video-container">
                 <div className="video-rainbow-border"></div>
