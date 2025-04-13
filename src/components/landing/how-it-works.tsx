@@ -38,29 +38,23 @@ const HowItWorks = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
             <div 
               key={index} 
               className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
-              <div className="flex items-center">
-                <div className="mr-6">
-                  <div className="w-16 h-16 bg-everest-blue/10 rounded-full flex items-center justify-center">
-                    <span className="inline-block bg-everest-blue text-white w-7 h-7 rounded-full text-sm flex items-center justify-center">
-                      {index + 1}
-                    </span>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-800">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {step.description}
-                  </p>
-                </div>
+              <div className="w-16 h-16 bg-everest-blue/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <span className="inline-block bg-everest-blue text-white w-7 h-7 rounded-full text-sm flex items-center justify-center">
+                  {index + 1}
+                </span>
               </div>
+              <h3 className="text-xl font-semibold mb-3 text-center text-gray-800">
+                {step.title}
+              </h3>
+              <p className="text-gray-600 text-center">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>
