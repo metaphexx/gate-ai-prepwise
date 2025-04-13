@@ -23,7 +23,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <CTAButton 
               size="lg" 
-              rainbowBorder={true}
+              rainbowBorder={false}
               onClick={() => scrollToElement('pricing')}
             >
               Start For Free
