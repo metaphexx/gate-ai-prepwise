@@ -8,7 +8,7 @@ const steps = [{
 }, {
   icon: BookOpen,
   title: 'Attempt Real GATE-style Questions',
-  description: 'Practice from over 1,000 curated questions, designed by WA high performers.'
+  description: 'Practice from over 2,000 curated questions, designed by WA 99+ ATAR Tutors'
 }, {
   icon: Brain,
   title: 'Get Instant Feedback from AI',
