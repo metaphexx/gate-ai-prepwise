@@ -1,7 +1,7 @@
 
 import React from 'react';
 import CTAButton from '../ui-custom/cta-button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Brain } from 'lucide-react';
 
 const HeroSection = () => {
   const scrollToElement = (id: string) => {
@@ -43,21 +43,33 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="md:w-1/2 md:pl-12 flex justify-center">
-          <div className="w-full max-w-md relative group">
-            <div className="dashboard-screenshot rounded-xl shadow-2xl overflow-hidden relative z-10 transition-transform duration-300 group-hover:scale-110 ease-in-out">
+          <div className="w-full max-w-md relative">
+            <div className="dashboard-screenshot rounded-xl shadow-2xl overflow-hidden relative z-10">
               <img 
-                src="/lovable-uploads/92e1fffe-4cd7-4809-b510-4973b95151df.png" 
+                src="/lovable-uploads/3bedcc62-2c03-4635-afca-b38b0f220736.png" 
                 alt="Everest Tutoring Dashboard" 
                 className="w-full h-auto"
               />
               <div className="rainbow-border"></div>
             </div>
-            <div className="absolute inset-0 bg-everest-purple/20 rounded-xl transform translate-x-4 translate-y-4 -z-10 group-hover:translate-x-5 group-hover:translate-y-5 transition-transform duration-300"></div>
+            <div className="absolute inset-0 bg-everest-purple/20 rounded-xl transform translate-x-4 translate-y-4 -z-10"></div>
           </div>
         </div>
       </div>
 
       <style>{`
+        .dashboard-screenshot {
+          position: relative;
+          width: 110%;
+          transform: scale(1);
+          transition: transform 0.3s ease;
+          cursor: pointer;
+        }
+        
+        .dashboard-screenshot:hover {
+          transform: scale(1.05);
+        }
+        
         .rainbow-border {
           position: absolute;
           inset: 0;
