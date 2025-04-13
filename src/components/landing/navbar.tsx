@@ -61,7 +61,11 @@ const Navbar = () => {
               <img 
                 src="/lovable-uploads/everest-tutoring-logo.png" 
                 alt="Everest Tutoring Logo" 
-                className="h-10 w-auto"
+                className="h-10 w-auto object-contain"
+                onError={(e) => {
+                  console.error('Logo image failed to load');
+                  e.currentTarget.src = '/placeholder.svg'; // Fallback image
+                }}
               />
             </a>
           </div>
@@ -227,4 +231,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
