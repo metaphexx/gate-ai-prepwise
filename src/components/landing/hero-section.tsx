@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CTAButton from '../ui-custom/cta-button';
 import { ArrowRight, Brain } from 'lucide-react';
@@ -27,7 +26,7 @@ const HeroSection = () => {
               className="w-full sm:w-auto"
               onClick={() => scrollToElement('pricing')}
             >
-              Start Free Trial
+              Start For Free
               <span className="block text-xs mt-1 opacity-80">No credit card required</span>
             </CTAButton>
             <CTAButton 

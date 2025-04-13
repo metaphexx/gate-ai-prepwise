@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check, X } from 'lucide-react';
 import CTAButton from '../ui-custom/cta-button';
@@ -91,7 +90,7 @@ const PricingSection = () => {
                 <td className="py-4 px-6 text-center">
                   <p className="text-gray-800 font-bold text-xl mb-1">Free</p>
                   <p className="text-gray-500 text-sm mb-4">Limited access</p>
-                  <CTAButton>Start Free Trial</CTAButton>
+                  <CTAButton>Start For Free</CTAButton>
                 </td>
                 <td className="py-4 px-6 text-center bg-blue-50">
                   <p className="text-gray-800 font-bold text-xl mb-1">$19.99/month</p>

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import CTAButton from '../ui-custom/cta-button';
 import { Menu, X, LogIn, UserRound } from 'lucide-react';
@@ -113,7 +112,7 @@ const Navbar = () => {
                   size="default" 
                   onClick={() => scrollToElement('pricing')}
                 >
-                  Start Free Trial
+                  Start For Free
                 </CTAButton>
               </div>
             ) : (
@@ -193,7 +192,7 @@ const Navbar = () => {
                       className="w-full"
                       onClick={() => scrollToElement('pricing')}
                     >
-                      Start Free Trial
+                      Start For Free
                     </CTAButton>
                   </li>
                 </>

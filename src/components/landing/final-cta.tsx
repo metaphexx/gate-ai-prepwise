@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CTAButton from '../ui-custom/cta-button';
 
@@ -23,7 +22,7 @@ const FinalCta = () => {
               }
             }}
           >
-            Start Free Trial Now
+            Start For Free
           </CTAButton>
           <CTAButton 
             variant="secondary" 
