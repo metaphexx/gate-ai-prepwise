@@ -57,10 +57,19 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .dashboard-screenshot {
           position: relative;
+          width: 110%;
+          transform: scale(1);
+          transition: transform 0.3s ease;
+          cursor: pointer;
         }
+        
+        .dashboard-screenshot:hover {
+          transform: scale(1.05);
+        }
+        
         .rainbow-border {
           position: absolute;
           inset: 0;
@@ -76,6 +85,7 @@ const HeroSection = () => {
           animation: rainbow-animation 6s linear infinite;
           pointer-events: none;
         }
+        
         @keyframes rainbow-animation {
           0% {
             background-position: 0% 50%;
