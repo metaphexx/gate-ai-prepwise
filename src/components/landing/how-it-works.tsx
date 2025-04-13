@@ -3,7 +3,7 @@ import { BookOpen, Brain, LineChart, Target } from 'lucide-react';
 
 const steps = [{
   icon: Target,
-  title: 'Choose The Question Type',
+  title: 'Choose Section',
   description: 'Maths (QR), Reading, Writing & Abstract Reasoning - all aligned with GATE/ASET Standards'
 }, {
   icon: BookOpen,
