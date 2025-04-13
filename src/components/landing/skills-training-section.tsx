@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { LineChart, Brain, CheckCircle2, Clock } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
-
 const SkillsTrainingSection = () => {
-  return (
-    <section className="py-20 bg-white">
+  return <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Swapped: Screenshots now on the left */}
@@ -13,11 +10,7 @@ const SkillsTrainingSection = () => {
             <Card className="border-none shadow-none">
               <CardContent className="p-0">
                 <div className="dashboard-screenshot rounded-xl shadow-md overflow-hidden relative z-10 cursor-pointer">
-                  <img 
-                    src="/lovable-uploads/468bf987-2aec-49af-93ce-48f54b742500.png" 
-                    alt="Skills Training Interface" 
-                    className="w-full h-auto"
-                  />
+                  <img src="/lovable-uploads/468bf987-2aec-49af-93ce-48f54b742500.png" alt="Skills Training Interface" className="w-full h-auto" />
                   <div className="rainbow-border"></div>
                 </div>
               </CardContent>
@@ -40,26 +33,19 @@ const SkillsTrainingSection = () => {
             </p>
 
             <ul className="space-y-3">
-              {[
-                'Time-Bound Critical Thinking Challenges',
-                'Personalized Training Based on Past Attempts',
-                'Custom Focus Areas: Verbal, Quant, Logic',
-                'AI Coaching to Strengthen Weak Points'
-              ].map((item, index) => (
-                <li key={index} className="flex items-start">
+              {['Time-Bound Critical Thinking Challenges', 'Personalized Training Based on Past Attempts', 'Custom Focus Areas: Verbal, Quant, Logic', 'AI Coaching to Strengthen Weak Points'].map((item, index) => <li key={index} className="flex items-start">
                   <div className="mr-3 mt-1">
                     <CheckCircle2 className="h-5 w-5 text-everest-blue" />
                   </div>
                   <span className="text-gray-700">{item}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
             
             <div className="mt-8 bg-amber-50 p-4 rounded-lg border border-amber-100">
               <div className="flex items-start">
                 <Brain className="text-amber-500 h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
                 <p className="text-amber-800 text-sm">
-                  <span className="font-medium">Developed by GATE top scorers and WA educators.</span>
+                  <span className="font-medium">Developed by GATE top scorers and 99+ ATAR WA Tutors.</span>
                 </p>
               </div>
             </div>
@@ -101,8 +87,6 @@ const SkillsTrainingSection = () => {
           }
         }
       `}</style>
-    </section>
-  );
+    </section>;
 };
-
 export default SkillsTrainingSection;
