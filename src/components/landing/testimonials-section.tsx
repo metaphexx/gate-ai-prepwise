@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Star } from 'lucide-react';
 import CTAButton from '../ui-custom/cta-button';
 import {
@@ -46,10 +46,47 @@ const testimonials = [
     role: "Year 4 Student",
     comment: "I love how the system explains my mistakes. It's like having a tutor available whenever I need help!",
     stars: 5
+  },
+  {
+    name: "David",
+    role: "Parent (Yr 5 Student)",
+    comment: "The personalized learning path keeps my daughter engaged. She's developing critical thinking skills I didn't expect!",
+    stars: 5
+  },
+  {
+    name: "Ling",
+    role: "Year 6 Student",
+    comment: "I improved my reading comprehension score by 35% in just two months using Everest's structured approach.",
+    stars: 5
+  },
+  {
+    name: "Amir",
+    role: "Parent (Yr 4 Student)",
+    comment: "The adaptive question selection is brilliant - it always challenges my son at just the right level.",
+    stars: 5
   }
 ];
 
 const TestimonialsSection = () => {
+  const carouselRef = useRef(null);
+  
+  useEffect(() => {
+    let interval;
+    // Set up automatic scrolling with an interval
+    if (carouselRef.current && carouselRef.current.scrollNext) {
+      interval = setInterval(() => {
+        carouselRef.current.scrollNext();
+      }, 5000); // Scroll every 5 seconds
+    }
+    
+    // Clear the interval when the component unmounts
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
+  }, []);
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -64,6 +101,7 @@ const TestimonialsSection = () => {
         
         <div className="max-w-6xl mx-auto">
           <Carousel 
+            ref={carouselRef}
             opts={{
               align: "start",
               loop: true,
@@ -72,7 +110,7 @@ const TestimonialsSection = () => {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-2 md:-ml-4 auto-scroll-testimonials">
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                   <div className="h-full bg-white rounded-xl p-8 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
@@ -119,7 +157,6 @@ const TestimonialsSection = () => {
         </div>
       </div>
       
-      {/* Standard React style element without jsx prop */}
       <style>
         {`
           @keyframes autoScroll {
@@ -129,6 +166,24 @@ const TestimonialsSection = () => {
             100% {
               transform: translateX(-100%);
             }
+          }
+          
+          .auto-scroll-testimonials {
+            animation: slideshow 40s linear infinite;
+          }
+          
+          @keyframes slideshow {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-250px * 4.5));
+            }
+          }
+          
+          /* Pause animation when user hovers over the carousel */
+          .auto-scroll-testimonials:hover {
+            animation-play-state: paused;
           }
         `}
       </style>
