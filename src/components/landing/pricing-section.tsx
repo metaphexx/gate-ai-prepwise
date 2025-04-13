@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check, X } from 'lucide-react';
 import CTAButton from '../ui-custom/cta-button';
@@ -59,7 +58,7 @@ const PricingSection = () => {
           </Card>
           
           {/* Premium Plan Card */}
-          <div className="p-[3px] rounded-2xl relative transform transition-all duration-300 hover:scale-105">
+          <div className="p-[4px] rounded-2xl relative transform transition-all duration-300 hover:scale-105">
             <div className="absolute inset-0 bg-gradient-rainbow rounded-2xl animate-rainbow-border"></div>
             <Card className="border-0 shadow-lg overflow-hidden rounded-2xl bg-white relative h-full">
               <div className="absolute top-0 right-0">
