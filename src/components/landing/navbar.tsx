@@ -1,11 +1,20 @@
 
 import React, { useState, useEffect } from 'react';
 import CTAButton from '../ui-custom/cta-button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, LogIn, UserRound } from 'lucide-react';
+import { Button } from '../ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +37,15 @@ const Navbar = () => {
       element.scrollIntoView({ behavior: 'smooth' });
       setMobileMenuOpen(false);
     }
+  };
+
+  const handleLogin = () => {
+    // For demo purposes, just toggle login state
+    setIsLoggedIn(!isLoggedIn);
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
   };
 
   return (
@@ -65,12 +83,49 @@ const Navbar = () => {
                 </li>
               </ul>
             </nav>
-            <CTAButton 
-              size="default" 
-              onClick={() => scrollToElement('pricing')}
-            >
-              Start Free Trial
-            </CTAButton>
+            
+            {!isLoggedIn ? (
+              <div className="flex items-center gap-4">
+                <Button 
+                  variant="ghost" 
+                  className="font-medium text-gray-700 hover:text-primary"
+                  onClick={handleLogin}
+                >
+                  <LogIn className="mr-2 h-4 w-4" />
+                  Log in
+                </Button>
+                <CTAButton 
+                  size="default" 
+                  onClick={() => scrollToElement('pricing')}
+                >
+                  Start Free Trial
+                </CTAButton>
+              </div>
+            ) : (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="relative rounded-full w-10 h-10 p-0">
+                    <div className="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 text-primary">
+                      <UserRound className="h-5 w-5" />
+                    </div>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-56">
+                  <div className="px-4 py-3">
+                    <p className="text-sm font-medium">My Account</p>
+                    <p className="text-xs text-muted-foreground mt-1">user@example.com</p>
+                  </div>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem className="cursor-pointer">Dashboard</DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer">Profile</DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer">Settings</DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem className="cursor-pointer" onClick={handleLogout}>
+                    Log out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )}
           </div>
           
           <button 
@@ -106,15 +161,59 @@ const Navbar = () => {
                   Pricing
                 </button>
               </li>
-              <li className="pt-2">
-                <CTAButton 
-                  size="default" 
-                  className="w-full"
-                  onClick={() => scrollToElement('pricing')}
-                >
-                  Start Free Trial
-                </CTAButton>
-              </li>
+              {!isLoggedIn ? (
+                <>
+                  <li>
+                    <Button 
+                      variant="ghost" 
+                      className="font-medium text-gray-700 w-full justify-start py-2"
+                      onClick={handleLogin}
+                    >
+                      <LogIn className="mr-2 h-4 w-4" />
+                      Log in
+                    </Button>
+                  </li>
+                  <li className="pt-2">
+                    <CTAButton 
+                      size="default" 
+                      className="w-full"
+                      onClick={() => scrollToElement('pricing')}
+                    >
+                      Start Free Trial
+                    </CTAButton>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li className="border-t border-gray-100 pt-2">
+                    <p className="text-sm font-medium px-2 pt-2">My Account</p>
+                    <p className="text-xs text-muted-foreground px-2">user@example.com</p>
+                  </li>
+                  <li>
+                    <button className="text-gray-800 font-medium block w-full text-left py-2">
+                      Dashboard
+                    </button>
+                  </li>
+                  <li>
+                    <button className="text-gray-800 font-medium block w-full text-left py-2">
+                      Profile
+                    </button>
+                  </li>
+                  <li>
+                    <button className="text-gray-800 font-medium block w-full text-left py-2">
+                      Settings
+                    </button>
+                  </li>
+                  <li>
+                    <button 
+                      className="text-gray-800 font-medium block w-full text-left py-2"
+                      onClick={handleLogout}
+                    >
+                      Log out
+                    </button>
+                  </li>
+                </>
+              )}
             </ul>
           </nav>
         </div>
