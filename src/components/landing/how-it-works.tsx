@@ -53,9 +53,7 @@ const HowItWorks = () => {
         
         <div className="flex justify-center mt-12">
           <div className="bg-everest-blue/5 border border-everest-blue/20 rounded-lg p-6 max-w-2xl text-center">
-            <p className="text-everest-blue font-medium">
-              Our AI-powered platform is designed for serious students who want to maximize their preparation time with immediate, personalized feedback and strategic improvement suggestions.
-            </p>
+            <p className="text-everest-blue font-medium">Our AI-powered platform is designed for serious students who want to maximize their preparation time with immediate, personalised feedback and strategic improvement suggestions.</p>
           </div>
         </div>
       </div>
