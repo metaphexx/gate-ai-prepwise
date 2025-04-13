@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: 'Can I cancel or switch plans anytime?',
-    answer: 'Yes – you're in full control. Cancel or upgrade at any time through your account settings with no hidden fees or commitments.'
+    answer: "Yes – you're in full control. Cancel or upgrade at any time through your account settings with no hidden fees or commitments."
   },
   {
     question: 'How often is new content added?',

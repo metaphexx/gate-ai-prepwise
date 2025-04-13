@@ -19,7 +19,7 @@ const testimonials = [
   {
     name: 'Michael',
     role: 'Parent (Yr 4 Student)',
-    comment: 'My son enjoys the instant feedback. He's motivated to keep improving because he can see his progress right away.',
+    comment: "My son enjoys the instant feedback. He's motivated to keep improving because he can see his progress right away.",
     stars: 5
   }
 ];
