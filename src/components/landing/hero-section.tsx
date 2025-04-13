@@ -59,7 +59,7 @@ const HeroSection = () => {
         .rainbow-border {
           position: absolute;
           inset: 0;
-          border: 6px solid transparent;
+          border: 4px solid transparent;
           border-radius: 0.75rem;
           background: linear-gradient(90deg, #8B5CF6, #D946EF, #F97316, #0EA5E9, #33C3F0, #8B5CF6) border-box;
           -webkit-mask: 
