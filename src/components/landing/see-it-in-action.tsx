@@ -50,7 +50,7 @@ const SeeItInAction = () => {
             {/* Right side - Video placeholder with rainbow border */}
             <div className="lg:w-1/2 mt-10 lg:mt-0">
               <div className="relative">
-                <div className="rainbow-border absolute -inset-1 rounded-xl animate-rainbow-border opacity-75"></div>
+                <div className="absolute -inset-1 rounded-xl rainbow-text animate-rainbow-border opacity-75 blur-md"></div>
                 <div className="aspect-video bg-slate-800 rounded-xl flex items-center justify-center cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden z-10">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-slate-900 z-10"></div>
                   <div className="relative z-20 flex flex-col items-center justify-center">
@@ -65,25 +65,6 @@ const SeeItInAction = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .rainbow-border {
-          background: linear-gradient(90deg, #8B5CF6, #D946EF, #F97316, #0EA5E9, #33C3F0, #8B5CF6);
-          background-size: 400% 100%;
-          animation: rainbow-animation 6s linear infinite;
-          filter: blur(8px);
-          z-index: 0;
-        }
-        
-        @keyframes rainbow-animation {
-          0% {
-            background-position: 0% 50%;
-          }
-          100% {
-            background-position: 400% 50%;
-          }
-        }
-      `}</style>
     </section>;
 };
 
