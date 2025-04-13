@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { LineChart, Brain, CheckCircle2, Clock } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
@@ -39,10 +38,10 @@ const SkillsTrainingSection = () => {
               ))}
             </ul>
             
-            <div className="mt-8 bg-blue-50 p-4 rounded-lg border border-blue-100">
+            <div className="mt-8 bg-amber-50 p-4 rounded-lg border border-amber-100">
               <div className="flex items-start">
-                <Brain className="text-blue-500 h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
-                <p className="text-blue-800 text-sm">
+                <Brain className="text-amber-500 h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
+                <p className="text-amber-800 text-sm">
                   <span className="font-medium">Developed by GATE top scorers and WA educators.</span>
                 </p>
               </div>
