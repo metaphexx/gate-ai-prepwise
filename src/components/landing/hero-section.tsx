@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CTAButton from '../ui-custom/cta-button';
 import { ArrowRight, Brain } from 'lucide-react';
@@ -17,7 +16,7 @@ const HeroSection = () => {
         <div className="md:w-1/2 mb-10 md:mb-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 animate-fade-in">
             <span className="text-[#009dff]">WA's Most Powerful</span> <span className="rainbow-text" data-text="GATE/ASET AI Question Bank">
-              GATE/ASET<br />Question Bank
+              GATE/ASET<br />AI Question Bank
             </span>
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-700">Access over 2,000 expertly designed GATE-style questions with instant AI marking, feedback &amp; help – built by WA 99+ ATAR Tutors</p>
