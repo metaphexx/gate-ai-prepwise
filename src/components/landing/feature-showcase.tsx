@@ -6,8 +6,8 @@ const FeatureShowcase = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Left side - Screenshot */}
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+          {/* Right side - Screenshot */}
           <div className="lg:w-1/2">
             <div className="relative">
               <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-100">
@@ -21,7 +21,7 @@ const FeatureShowcase = () => {
             </div>
           </div>
 
-          {/* Right side - Content */}
+          {/* Left side - Content */}
           <div className="lg:w-1/2">
             <div className="mb-6">
               <span className="bg-everest-blue/10 text-everest-blue px-4 py-1 rounded-full text-sm font-medium">
@@ -60,3 +60,4 @@ const FeatureShowcase = () => {
 };
 
 export default FeatureShowcase;
+
