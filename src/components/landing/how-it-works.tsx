@@ -44,11 +44,11 @@ const HowItWorks = () => {
               key={index} 
               className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
-              <div className="w-16 h-16 bg-everest-purple/10 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <step.icon className="w-8 h-8 text-everest-purple" />
+              <div className="w-16 h-16 bg-everest-blue/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <step.icon className="w-8 h-8 text-everest-blue" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-center text-gray-800">
-                <span className="inline-block bg-everest-purple text-white w-7 h-7 rounded-full text-sm mr-2">
+                <span className="inline-block bg-everest-blue text-white w-7 h-7 rounded-full text-sm mr-2">
                   {index + 1}
                 </span>
                 {step.title}
@@ -61,8 +61,8 @@ const HowItWorks = () => {
         </div>
         
         <div className="flex justify-center mt-12">
-          <div className="bg-everest-purple/5 border border-everest-purple/20 rounded-lg p-6 max-w-2xl text-center">
-            <p className="text-everest-purple font-medium">
+          <div className="bg-everest-blue/5 border border-everest-blue/20 rounded-lg p-6 max-w-2xl text-center">
+            <p className="text-everest-blue font-medium">
               Our AI-powered platform is designed for serious students who want to maximize their preparation time with immediate, personalized feedback and strategic improvement suggestions.
             </p>
           </div>

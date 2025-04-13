@@ -50,8 +50,8 @@ const FeaturesSection = () => {
               className="bg-white rounded-xl p-6 shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg"
             >
               <div className="flex items-start mb-4">
-                <div className="mr-4 bg-everest-purple/10 p-3 rounded-full">
-                  <feature.icon className="w-6 h-6 text-everest-purple" />
+                <div className="mr-4 bg-everest-blue/10 p-3 rounded-full">
+                  <feature.icon className="w-6 h-6 text-everest-blue" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-800">

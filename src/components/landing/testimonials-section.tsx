@@ -5,20 +5,20 @@ import CTAButton from '../ui-custom/cta-button';
 
 const testimonials = [
   {
-    name: 'Neethu',
-    role: 'Parent (Yr 6 Student)',
-    comment: 'The AI feedback helped my daughter improve her written responses so quickly. This is a game-changer!',
+    name: "Neethu",
+    role: "Parent (Yr 6 Student)",
+    comment: "The AI feedback helped my daughter improve her written responses so quickly. This is a game-changer!",
     stars: 5
   },
   {
-    name: 'Zihan',
-    role: 'Year 5 Student',
-    comment: 'The instant marking was so helpful – I knew what to fix straight away. I ended up ranking in the top 10% for my school!',
+    name: "Zihan",
+    role: "Year 5 Student",
+    comment: "The instant marking was so helpful – I knew what to fix straight away. I ended up ranking in the top 10% for my school!",
     stars: 5
   },
   {
-    name: 'Michael',
-    role: 'Parent (Yr 4 Student)',
+    name: "Michael",
+    role: "Parent (Yr 4 Student)",
     comment: "My son enjoys the instant feedback. He's motivated to keep improving because he can see his progress right away.",
     stars: 5
   }
@@ -52,7 +52,7 @@ const TestimonialsSection = () => {
                 "{testimonial.comment}"
               </p>
               <div className="flex items-center">
-                <div className="w-10 h-10 bg-everest-purple/20 rounded-full flex items-center justify-center text-everest-purple font-bold">
+                <div className="w-10 h-10 bg-everest-blue/20 rounded-full flex items-center justify-center text-everest-blue font-bold">
                   {testimonial.name.charAt(0)}
                 </div>
                 <div className="ml-3">

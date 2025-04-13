@@ -28,8 +28,8 @@ const TrustSignals = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {trustItems.map((item, index) => (
             <div key={index} className="flex items-start">
-              <div className="bg-everest-purple/10 p-3 rounded-full mr-4">
-                <item.icon className="h-6 w-6 text-everest-purple" />
+              <div className="bg-everest-blue/10 p-3 rounded-full mr-4">
+                <item.icon className="h-6 w-6 text-everest-blue" />
               </div>
               <p className="text-gray-700 font-medium">{item.text}</p>
             </div>

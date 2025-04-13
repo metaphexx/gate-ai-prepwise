@@ -15,10 +15,10 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">How It Works</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Support</a></li>
+              <li><a href="#" className="hover:text-everest-blue transition-colors">About Us</a></li>
+              <li><a href="#" className="hover:text-everest-blue transition-colors">How It Works</a></li>
+              <li><a href="#" className="hover:text-everest-blue transition-colors">Pricing</a></li>
+              <li><a href="#" className="hover:text-everest-blue transition-colors">Support</a></li>
             </ul>
           </div>
           <div>
@@ -36,10 +36,10 @@ const Footer = () => {
               © {new Date().getFullYear()} Everest Tutoring. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-everest-blue transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-everest-blue transition-colors">
                 Terms of Service
               </a>
             </div>

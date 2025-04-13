@@ -19,7 +19,7 @@ const PricingSection = () => {
         <div className="max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg">
           <table className="w-full border-collapse">
             <thead>
-              <tr className="bg-everest-purple text-white">
+              <tr className="bg-everest-blue text-white">
                 <th className="py-4 px-6 text-left">Feature</th>
                 <th className="py-4 px-6 text-center">Free Plan</th>
                 <th className="py-4 px-6 text-center bg-everest-blue">Premium Plan</th>
@@ -96,7 +96,7 @@ const PricingSection = () => {
                 <td className="py-4 px-6 text-center bg-blue-50">
                   <p className="text-gray-800 font-bold text-xl mb-1">$19.99/month</p>
                   <p className="text-gray-500 text-sm mb-4">Unlock all features</p>
-                  <CTAButton className="bg-everest-blue hover:bg-everest-blue/90">Upgrade to Premium</CTAButton>
+                  <CTAButton>Upgrade to Premium</CTAButton>
                 </td>
               </tr>
             </tbody>

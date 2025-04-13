@@ -4,7 +4,7 @@ import CTAButton from '../ui-custom/cta-button';
 
 const FinalCta = () => {
   return (
-    <section className="py-20 hero-gradient text-white">
+    <section className="py-20 bg-hero-blue-gradient text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
           Get Started with Everest's GATE AI Question Bank – Free
