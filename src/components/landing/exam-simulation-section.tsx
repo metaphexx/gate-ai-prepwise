@@ -14,7 +14,7 @@ const ExamSimulationSection = () => {
               <CardContent className="p-0">
                 <div className="dashboard-screenshot rounded-xl shadow-md overflow-hidden relative z-10 cursor-pointer">
                   <img 
-                    src="/lovable-uploads/7649866b-107e-4268-9da9-9dca90dbc3fb.png" 
+                    src="/lovable-uploads/37b08da1-4137-4671-8d91-f2ea486bd111.png" 
                     alt="Mock Exam Interface" 
                     className="w-full h-auto"
                   />
