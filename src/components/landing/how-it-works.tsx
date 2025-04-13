@@ -44,20 +44,22 @@ const HowItWorks = () => {
             return (
               <div 
                 key={index} 
-                className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative"
               >
-                <div className="w-16 h-16 bg-everest-blue/10 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <IconComponent className="text-everest-blue" size={24} />
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-everest-blue rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white text-sm font-medium">
+                      {index + 1}
+                    </span>
+                  </div>
+                  <div className="w-16 h-16 bg-everest-blue/10 rounded-full flex items-center justify-center">
+                    <IconComponent className="text-everest-blue" size={24} />
+                  </div>
                 </div>
-                <div className="w-8 h-8 bg-everest-blue rounded-full flex items-center justify-center absolute -mt-14 ml-12">
-                  <span className="text-white text-sm font-medium">
-                    {index + 1}
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-center text-gray-800">
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 text-center">
+                <p className="text-gray-600">
                   {step.description}
                 </p>
               </div>
