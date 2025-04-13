@@ -43,7 +43,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="md:w-1/2 md:pl-12 flex justify-center">
-          <div className="w-full max-w-md relative">
+          <div className="w-full max-w-md relative mx-auto">
             <div className="dashboard-screenshot rounded-xl shadow-2xl overflow-hidden relative z-10">
               <img 
                 src="/lovable-uploads/3bedcc62-2c03-4635-afca-b38b0f220736.png" 
@@ -60,7 +60,7 @@ const HeroSection = () => {
       <style>{`
         .dashboard-screenshot {
           position: relative;
-          width: 110%;
+          width: 100%;
           transform: scale(1);
           transition: transform 0.3s ease;
           cursor: pointer;

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import CTAButton from '../ui-custom/cta-button';
 import { Menu, X, LogIn, UserRound } from 'lucide-react';
@@ -64,7 +65,7 @@ const Navbar = () => {
               <img 
                 src="lovable-uploads/821f8613-4281-44ea-a659-b16ba212c4b4.png" 
                 alt="Everest Tutoring Logo" 
-                className={`h-10 w-auto object-contain transition-opacity duration-300 ${
+                className={`h-14 w-auto object-contain transition-opacity duration-300 ${
                   logoLoaded ? 'opacity-100' : 'opacity-0'
                 }`}
                 onLoad={handleLogoLoad}
