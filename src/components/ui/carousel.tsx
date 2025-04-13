@@ -13,6 +13,12 @@ type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
 type CarouselOptions = UseCarouselParameters[0]
 type CarouselPlugin = UseCarouselParameters[1]
 
+// Define a custom interface for the ref
+interface CarouselRef extends HTMLDivElement {
+  scrollNext: () => void
+  scrollPrev: () => void
+}
+
 type CarouselProps = {
   opts?: CarouselOptions
   plugins?: CarouselPlugin
@@ -42,7 +48,7 @@ function useCarousel() {
 }
 
 const Carousel = React.forwardRef<
-  HTMLDivElement,
+  CarouselRef,
   React.HTMLAttributes<HTMLDivElement> & CarouselProps
 >(
   (
@@ -67,15 +73,23 @@ const Carousel = React.forwardRef<
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
     const [canScrollNext, setCanScrollNext] = React.useState(false)
 
-    // Expose scrollNext method via ref
-    React.useImperativeHandle(ref, () => ({
-      scrollNext: () => {
+    // Create a local ref that we'll merge with the forwarded ref
+    const localRef = React.useRef<HTMLDivElement>(null)
+
+    // Expose scrollNext method via ref with proper typing
+    React.useImperativeHandle(ref, () => {
+      const div = localRef.current as CarouselRef
+      
+      // Add our custom methods to the element
+      div.scrollNext = () => {
         api?.scrollNext()
-      },
-      scrollPrev: () => {
+      }
+      div.scrollPrev = () => {
         api?.scrollPrev()
       }
-    }));
+      
+      return div
+    }, [api]);
 
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
@@ -144,7 +158,7 @@ const Carousel = React.forwardRef<
         }}
       >
         <div
-          ref={ref}
+          ref={localRef}
           onKeyDownCapture={handleKeyDown}
           className={cn("relative", className)}
           role="region"
