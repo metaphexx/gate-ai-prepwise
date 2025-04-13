@@ -5,7 +5,7 @@ import { BookOpen, Brain, LineChart, Target } from 'lucide-react';
 const steps = [
   {
     icon: Target,
-    title: 'Choose Your Exam Area',
+    title: 'Choose The Question Type', // Updated title here
     description: 'Maths, Reading, Abstract Reasoning, and more – all aligned with GATE & ASET standards.'
   },
   {
