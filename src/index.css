@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -112,12 +113,10 @@
     transform: translateY(0);
   }
   
-  /* Rainbow text animation - text outline version */
+  /* Rainbow text animation */
   .rainbow-text {
     position: relative;
     display: inline-block;
-    color: inherit; /* Keep original text color */
-    font-weight: inherit; /* Keep original font weight */
   }
   
   .rainbow-text::before {
@@ -127,9 +126,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    -webkit-text-stroke: 3px transparent; /* Increased from 2px to 3px */
-    text-stroke: 3px transparent;
-    -webkit-text-stroke-width: 3px; /* Increased from 2px to 3px */
     background: linear-gradient(
       90deg,
       #8B5CF6,
@@ -142,20 +138,8 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    -webkit-text-fill-color: transparent;
     background-size: 400% 100%;
     animation: rainbow-animation 6s linear infinite;
-    z-index: -1;
-  }
-  
-  /* Thicker text shadow for a more pronounced edge */
-  .rainbow-text {
-    text-shadow: 
-      -2px -2px 0 rgba(139, 92, 246, 0.8), /* Increased from -1px to -2px */
-      2px -2px 0 rgba(217, 70, 239, 0.8),  /* Increased from 1px to 2px */
-      -2px 2px 0 rgba(249, 115, 22, 0.8),  /* Increased from -1px to -2px */
-      2px 2px 0 rgba(14, 165, 233, 0.8);   /* Increased from 1px to 2px */
-    z-index: 1;
   }
   
   @keyframes rainbow-animation {
