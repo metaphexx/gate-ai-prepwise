@@ -47,9 +47,12 @@ const FeaturesSection = () => {
           {features.slice(0, 3).map((feature, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-xl p-6 shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg"
+              className="bg-white rounded-xl p-6 shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg relative"
             >
-              <div className="flex items-start mb-4">
+              {/* Rainbow border element */}
+              <div className="rainbow-border absolute inset-0 rounded-xl pointer-events-none"></div>
+              
+              <div className="flex items-start mb-4 relative z-10">
                 <div className="mr-4 bg-everest-blue/10 p-3 rounded-full">
                   <feature.icon className="w-6 h-6 text-everest-blue" />
                 </div>
@@ -71,9 +74,12 @@ const FeaturesSection = () => {
             {features.slice(3).map((feature, index) => (
               <div 
                 key={index + 3} 
-                className="bg-white rounded-xl p-6 shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg"
+                className="bg-white rounded-xl p-6 shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg relative"
               >
-                <div className="flex items-start mb-4">
+                {/* Rainbow border element */}
+                <div className="rainbow-border absolute inset-0 rounded-xl pointer-events-none"></div>
+                
+                <div className="flex items-start mb-4 relative z-10">
                   <div className="mr-4 bg-everest-blue/10 p-3 rounded-full">
                     <feature.icon className="w-6 h-6 text-everest-blue" />
                   </div>
@@ -91,9 +97,29 @@ const FeaturesSection = () => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .rainbow-border {
+          border: 3px solid transparent;
+          background: linear-gradient(90deg, #8B5CF6, #D946EF, #F97316, #0EA5E9, #33C3F0, #8B5CF6) border-box;
+          -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          background-size: 400% 100%;
+          animation: rainbow-animation 6s linear infinite;
+        }
+        
+        @keyframes rainbow-animation {
+          0% {
+            background-position: 0% 50%;
+          }
+          100% {
+            background-position: 400% 50%;
+          }
+        }
+      `}</style>
     </section>
   );
 };
 
 export default FeaturesSection;
-

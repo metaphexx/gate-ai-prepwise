@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { BookOpen, Brain, LineChart, Target } from 'lucide-react';
+
 const steps = [{
   icon: Target,
   title: 'Choose Question Type',
@@ -17,6 +19,7 @@ const steps = [{
   title: 'Track Your Progress',
   description: 'See detailed analytics showing strengths, weaknesses, and improvement over time.'
 }];
+
 const HowItWorks = () => {
   return <section id="how-it-works" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -31,7 +34,10 @@ const HowItWorks = () => {
           {steps.map((step, index) => {
           const IconComponent = step.icon;
           return <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative">
-                <div className="flex items-center mb-4">
+                {/* Rainbow border element */}
+                <div className="rainbow-border absolute inset-0 rounded-xl pointer-events-none"></div>
+                
+                <div className="flex items-center mb-4 relative z-10">
                   <div className="w-10 h-10 bg-everest-blue rounded-full flex items-center justify-center mr-4">
                     <span className="text-white text-sm font-medium">
                       {index + 1}
@@ -41,10 +47,10 @@ const HowItWorks = () => {
                     <IconComponent className="text-everest-blue" size={24} />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">
+                <h3 className="text-xl font-semibold mb-3 text-gray-800 relative z-10">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 text-base">
+                <p className="text-gray-600 text-base relative z-10">
                   {step.description}
                 </p>
               </div>;
@@ -57,6 +63,28 @@ const HowItWorks = () => {
           </div>
         </div>
       </div>
+      
+      <style jsx>{`
+        .rainbow-border {
+          border: 3px solid transparent;
+          background: linear-gradient(90deg, #8B5CF6, #D946EF, #F97316, #0EA5E9, #33C3F0, #8B5CF6) border-box;
+          -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          background-size: 400% 100%;
+          animation: rainbow-animation 6s linear infinite;
+        }
+        
+        @keyframes rainbow-animation {
+          0% {
+            background-position: 0% 50%;
+          }
+          100% {
+            background-position: 400% 50%;
+          }
+        }
+      `}</style>
     </section>;
 };
+
 export default HowItWorks;
