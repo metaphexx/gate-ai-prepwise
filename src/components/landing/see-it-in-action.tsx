@@ -3,7 +3,7 @@ import React from 'react';
 import { Play, Video } from 'lucide-react';
 
 const SeeItInAction = () => {
-  return <section className="py-20 bg-gray-50">
+  return <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12">

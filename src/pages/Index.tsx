@@ -48,11 +48,11 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <HowItWorks />
+      <SeeItInAction />
       <FeatureShowcase />
       <ExamSimulationSection />
       <SkillsTrainingSection />
       <FeaturesSection />
-      <SeeItInAction />
       <PricingSection />
       <TrustSignals />
       <TestimonialsSection />
