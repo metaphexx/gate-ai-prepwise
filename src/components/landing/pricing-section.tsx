@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Check, X } from 'lucide-react';
 import CTAButton from '../ui-custom/cta-button';
@@ -58,58 +59,62 @@ const PricingSection = () => {
           </Card>
           
           {/* Premium Plan Card */}
-          <Card className="border-0 shadow-lg overflow-hidden rounded-2xl bg-white relative transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="absolute top-0 right-0">
-              <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 text-xs font-semibold uppercase rounded-bl-lg">
-                RECOMMENDED
+          <div className="p-[3px] rounded-2xl relative transform transition-all duration-300 hover:scale-105">
+            <div className="absolute inset-0 bg-gradient-rainbow rounded-2xl animate-rainbow-border"></div>
+            <Card className="border-0 shadow-lg overflow-hidden rounded-2xl bg-white relative h-full">
+              <div className="absolute top-0 right-0">
+                <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 text-xs font-semibold uppercase rounded-bl-lg">
+                  RECOMMENDED
+                </div>
               </div>
-            </div>
-            <div className="p-8">
-              <h3 className="text-2xl font-bold mb-1">Premium Plan</h3>
-              <div className="flex items-baseline mb-2">
-                <span className="text-5xl font-bold">$9.69</span>
-                <span className="ml-2 text-gray-600">per week, billed monthly</span>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold mb-1">Premium Plan</h3>
+                <div className="flex items-baseline mb-2">
+                  <span className="text-5xl font-bold">$9.69</span>
+                  <span className="ml-2 text-gray-600">per week, billed monthly</span>
+                </div>
+                <p className="text-gray-600 mb-6">Everything you need for GATE success.</p>
+                
+                <div className="border-t border-gray-200 pt-6 mb-6">
+                  <p className="font-medium text-gray-800 mb-4">What's included:</p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>GATE-Style Questions</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Instant AI Feedback</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Writing Feedback</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Analytics Dashboard</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Timed Mock Exams</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Personalized Recommendations</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <CTAButton 
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+                  variant="primary"
+                  rainbowBorder={false}
+                >
+                  Go Premium
+                </CTAButton>
               </div>
-              <p className="text-gray-600 mb-6">Everything you need for GATE success.</p>
-              
-              <div className="border-t border-gray-200 pt-6 mb-6">
-                <p className="font-medium text-gray-800 mb-4">What's included:</p>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>GATE-Style Questions</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Instant AI Feedback</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Writing Feedback</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Analytics Dashboard</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Timed Mock Exams</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Personalized Recommendations</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <CTAButton 
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white"
-                variant="primary"
-              >
-                Go Premium
-              </CTAButton>
-            </div>
-          </Card>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
