@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import CTAButton from '../ui-custom/cta-button';
 import { Menu, X, LogIn, UserRound } from 'lucide-react';
@@ -59,14 +60,16 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <div className="flex items-center">
-            <a href="/" className="flex items-center">
+          <div className="md:flex-1">
+            {/* Empty div for mobile to help with centering */}
+            <div className="md:hidden"></div>
+            <a href="/" className="flex items-center justify-center md:justify-start">
               <img 
                 src="lovable-uploads/821f8613-4281-44ea-a659-b16ba212c4b4.png" 
                 alt="Everest Tutoring Logo" 
                 className={`h-14 w-auto object-contain transition-opacity duration-300 ${
                   logoLoaded ? 'opacity-100' : 'opacity-0'
-                }`}
+                } mx-auto md:mx-0`} // Added mx-auto for mobile centering
                 onLoad={handleLogoLoad}
                 onError={(e) => {
                   console.error('Logo image failed to load');
