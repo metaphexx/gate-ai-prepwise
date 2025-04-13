@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BookOpen, Brain, LineChart, Target } from 'lucide-react';
 
@@ -34,7 +33,6 @@ const HowItWorks = () => {
           {steps.map((step, index) => {
           const IconComponent = step.icon;
           return <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative">
-                {/* Rainbow border element */}
                 <div className="rainbow-border absolute inset-0 rounded-xl pointer-events-none"></div>
                 
                 <div className="flex items-center mb-4 relative z-10">
@@ -66,7 +64,7 @@ const HowItWorks = () => {
       
       <style jsx>{`
         .rainbow-border {
-          border: 3px solid transparent;
+          border: 5px solid transparent;
           background: linear-gradient(90deg, #8B5CF6, #D946EF, #F97316, #0EA5E9, #33C3F0, #8B5CF6) border-box;
           -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
           -webkit-mask-composite: xor;
