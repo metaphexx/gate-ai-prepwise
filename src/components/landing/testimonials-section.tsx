@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Star } from 'lucide-react';
 import CTAButton from '../ui-custom/cta-button';
@@ -6,8 +5,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 const testimonials = [
@@ -17,7 +14,6 @@ const testimonials = [
     comment: "The AI feedback helped my daughter improve her written responses so quickly. This is a game-changer!",
     stars: 5
   },
-  // Swapped Zihan and Raj's positions
   {
     name: "Raj",
     role: "Parent (Yr 5 Student)",
@@ -73,14 +69,12 @@ const TestimonialsSection = () => {
   
   useEffect(() => {
     let interval;
-    // Set up automatic scrolling with an interval
     if (carouselRef.current && carouselRef.current.scrollNext) {
       interval = setInterval(() => {
         carouselRef.current.scrollNext();
       }, 5000); // Scroll every 5 seconds
     }
     
-    // Clear the interval when the component unmounts
     return () => {
       if (interval) {
         clearInterval(interval);
@@ -136,10 +130,6 @@ const TestimonialsSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-center mt-8">
-              <CarouselPrevious className="relative static left-0 right-auto mr-2 translate-y-0" />
-              <CarouselNext className="relative static right-0 left-auto ml-2 translate-y-0" />
-            </div>
           </Carousel>
         </div>
         
