@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -128,9 +127,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    -webkit-text-stroke: 2px transparent;
-    text-stroke: 2px transparent;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke: 3px transparent; /* Increased from 2px to 3px */
+    text-stroke: 3px transparent;
+    -webkit-text-stroke-width: 3px; /* Increased from 2px to 3px */
     background: linear-gradient(
       90deg,
       #8B5CF6,
@@ -149,13 +148,13 @@
     z-index: -1;
   }
   
-  /* Add a text shadow to create an outline effect */
+  /* Thicker text shadow for a more pronounced edge */
   .rainbow-text {
     text-shadow: 
-      -1px -1px 0 rgba(139, 92, 246, 0.8),
-      1px -1px 0 rgba(217, 70, 239, 0.8),
-      -1px 1px 0 rgba(249, 115, 22, 0.8),
-      1px 1px 0 rgba(14, 165, 233, 0.8);
+      -2px -2px 0 rgba(139, 92, 246, 0.8), /* Increased from -1px to -2px */
+      2px -2px 0 rgba(217, 70, 239, 0.8),  /* Increased from 1px to 2px */
+      -2px 2px 0 rgba(249, 115, 22, 0.8),  /* Increased from -1px to -2px */
+      2px 2px 0 rgba(14, 165, 233, 0.8);   /* Increased from 1px to 2px */
     z-index: 1;
   }
   
