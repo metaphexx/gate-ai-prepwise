@@ -27,7 +27,7 @@ const CTAButton = ({
       )}
       <button
         className={cn(
-          'w-full rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1 relative z-10',
+          'w-full sm:w-auto rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1 relative z-10',
           variant === 'primary' 
             ? 'bg-everest-blue text-white hover:bg-everest-blue/90' 
             : 'bg-white text-everest-blue border border-everest-blue hover:bg-gray-50',
