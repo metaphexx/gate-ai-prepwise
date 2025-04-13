@@ -1,16 +1,11 @@
-
 import React from 'react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
+  return <footer className="bg-gray-900 text-gray-300 py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Everest GATE</h3>
-            <p className="mb-4 text-sm">
-              The AI-powered GATE exam preparation platform built by Perth's top educators.
-            </p>
+            <p className="mb-4 text-sm">The AI-powered GATE exam preparation platform built by 99+ ATAR WA Tutors</p>
           </div>
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
@@ -46,8 +41,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
