@@ -1,10 +1,10 @@
 import React from 'react';
 import { BookOpen, Brain, LineChart, Target } from 'lucide-react';
+
 const steps = [{
   icon: Target,
   title: 'Choose The Question Type',
-  // Updated title here
-  description: 'Maths, Reading, Abstract Reasoning, and more – all aligned with GATE & ASET standards.'
+  description: 'Maths (QR), Reading, Writing & Abstract Reasoning - all aligned with GATE/ASET Standards'
 }, {
   icon: BookOpen,
   title: 'Attempt Real GATE-style Questions',
@@ -18,6 +18,7 @@ const steps = [{
   title: 'Track Your Progress',
   description: 'See detailed analytics showing strengths, weaknesses, and improvement over time.'
 }];
+
 const HowItWorks = () => {
   return <section id="how-it-works" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -64,4 +65,5 @@ const HowItWorks = () => {
       </div>
     </section>;
 };
+
 export default HowItWorks;
