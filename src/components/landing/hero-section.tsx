@@ -1,3 +1,4 @@
+
 import React from 'react';
 import CTAButton from '../ui-custom/cta-button';
 import { ArrowRight, Brain } from 'lucide-react';
@@ -47,7 +48,9 @@ const HeroSection = () => {
               <div className="bg-everest-light-blue/20 p-5 rounded-lg mb-4 flex items-center">
                 <Brain className="w-12 h-12 text-everest-blue mr-4" />
                 <div>
-                  <h3 className="text-gray-800 font-semibold">AI-Powered Feedback</h3>
+                  <h3 className="text-gray-800 font-semibold">
+                    <span className="rainbow-text" data-text="AI-Powered Feedback">AI-Powered Feedback</span>
+                  </h3>
                   <p className="text-gray-600 text-sm">Get instant expert guidance on your answers</p>
                 </div>
               </div>
