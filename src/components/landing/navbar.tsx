@@ -57,8 +57,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="/" className="font-bold text-2xl text-everest-blue">
-              Everest GATE
+            <a href="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/everest-tutoring-logo.png" 
+                alt="Everest Tutoring Logo" 
+                className="h-10 w-auto"
+              />
             </a>
           </div>
           
@@ -223,3 +227,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
