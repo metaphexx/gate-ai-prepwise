@@ -17,10 +17,11 @@ const testimonials = [
     comment: "The AI feedback helped my daughter improve her written responses so quickly. This is a game-changer!",
     stars: 5
   },
+  // Swapped Zihan and Raj's positions
   {
-    name: "Zihan",
-    role: "Year 5 Student",
-    comment: "The instant marking was so helpful – I knew what to fix straight away. I ended up ranking in the top 10% for my school!",
+    name: "Raj",
+    role: "Parent (Yr 5 Student)",
+    comment: "We tried many programs before, but Everest's AI feedback is on another level. My son's writing scores improved within weeks!",
     stars: 5
   },
   {
@@ -36,9 +37,9 @@ const testimonials = [
     stars: 5
   },
   {
-    name: "Raj",
-    role: "Parent (Yr 5 Student)",
-    comment: "We tried many programs before, but Everest's AI feedback is on another level. My son's writing scores improved within weeks!",
+    name: "Zihan",
+    role: "Year 5 Student",
+    comment: "The instant marking was so helpful – I knew what to fix straight away. I ended up ranking in the top 10% for my school!",
     stars: 5
   },
   {
