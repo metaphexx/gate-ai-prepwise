@@ -19,7 +19,7 @@ const CTAButton = ({
 }: CTAButtonProps) => {
   return (
     <div className={cn(
-      "relative inline-block", 
+      "relative inline-block w-full sm:w-auto", 
       rainbowBorder && "p-[3px] rounded-lg"
     )}>
       {rainbowBorder && (
@@ -27,12 +27,12 @@ const CTAButton = ({
       )}
       <button
         className={cn(
-          'rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1 relative z-10',
+          'w-full rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1 relative z-10',
           variant === 'primary' 
             ? 'bg-everest-blue text-white hover:bg-everest-blue/90' 
             : 'bg-white text-everest-blue border border-everest-blue hover:bg-gray-50',
           size === 'default' ? 'px-6 py-3 text-sm' : 'px-8 py-4 text-base',
-          rainbowBorder && 'bg-white text-everest-blue',
+          rainbowBorder && 'bg-everest-blue text-white',
           className
         )}
         {...props}

@@ -24,13 +24,12 @@ const HeroSection = () => {
             <CTAButton 
               size="lg" 
               rainbowBorder={true}
-              className="w-full sm:w-auto" 
               onClick={() => scrollToElement('pricing')}
             >
               Start For Free
               <span className="block text-xs mt-1 opacity-80">No credit card required</span>
             </CTAButton>
-            <CTAButton variant="secondary" size="lg" className="w-full sm:w-auto" onClick={() => scrollToElement('how-it-works')}>
+            <CTAButton variant="secondary" size="lg" onClick={() => scrollToElement('how-it-works')}>
               <span className="flex items-center justify-center">
                 See How It Works <ArrowRight className="ml-2 h-4 w-4" />
               </span>
