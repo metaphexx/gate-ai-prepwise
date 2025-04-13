@@ -21,15 +21,11 @@ const HeroSection = () => {
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-700">Access over 2,000 expertly designed GATE-style questions with instant AI marking, feedback &amp; help – built by WA 99+ ATAR Tutors</p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <CTAButton 
-              size="lg" 
-              rainbowBorder={true}
-              onClick={() => scrollToElement('pricing')}
-            >
+            <CTAButton size="lg" className="w-full sm:w-auto" onClick={() => scrollToElement('pricing')}>
               Start For Free
               <span className="block text-xs mt-1 opacity-80">No credit card required</span>
             </CTAButton>
-            <CTAButton variant="secondary" size="lg" onClick={() => scrollToElement('how-it-works')}>
+            <CTAButton variant="secondary" size="lg" className="w-full sm:w-auto" onClick={() => scrollToElement('how-it-works')}>
               <span className="flex items-center justify-center">
                 See How It Works <ArrowRight className="ml-2 h-4 w-4" />
               </span>

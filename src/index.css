@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -181,23 +182,5 @@
   
   .video-content:hover {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  }
-
-  .bg-gradient-rainbow {
-    background: linear-gradient(90deg, #8B5CF6, #D946EF, #F97316, #0EA5E9, #33C3F0, #8B5CF6);
-    background-size: 400% 100%;
-  }
-
-  .animate-rainbow-border {
-    animation: rainbow-border 6s linear infinite;
-  }
-
-  @keyframes rainbow-border {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 400% 50%;
-    }
   }
 }
