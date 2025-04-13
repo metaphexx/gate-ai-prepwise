@@ -32,27 +32,23 @@ const PricingSection = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span><span className="text-gray-500">(Limited)</span> GATE-Style Questions</span>
+                    <span>15 QR, AR & Reading Questions</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Instant AI Feedback</span>
+                    <span>1 AI-Marked Writing Task</span>
                   </li>
                   <li className="flex items-start">
                     <X className="h-5 w-5 text-gray-300 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-400">Writing Feedback</span>
+                    <span className="text-gray-400">Full Length Timed Mock Exams</span>
                   </li>
                   <li className="flex items-start">
                     <X className="h-5 w-5 text-gray-300 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-400">Analytics Dashboard</span>
+                    <span className="text-gray-400">All AI-Powered Skill Trainer Modules</span>
                   </li>
                   <li className="flex items-start">
                     <X className="h-5 w-5 text-gray-300 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-400">Timed Mock Exams</span>
-                  </li>
-                  <li className="flex items-start">
-                    <X className="h-5 w-5 text-gray-300 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-400">Personalized Recommendations</span>
+                    <span className="text-gray-400">Access to New Released Questions</span>
                   </li>
                 </ul>
               </div>
