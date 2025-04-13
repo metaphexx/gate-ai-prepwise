@@ -49,9 +49,9 @@ const SeeItInAction = () => {
             
             {/* Right side - Video placeholder with rainbow border */}
             <div className="lg:w-1/2 mt-10 lg:mt-0">
-              <div className="relative video-container">
-                <div className="rainbow-border"></div>
-                <div className="aspect-video bg-slate-800 rounded-xl flex items-center justify-center cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
+              <div className="video-container">
+                <div className="video-rainbow-border"></div>
+                <div className="video-content">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-slate-900"></div>
                   <div className="relative z-20 flex flex-col items-center justify-center">
                     <div className="bg-blue-500 hover:bg-blue-600 transition-colors duration-300 w-20 h-20 rounded-full flex items-center justify-center mb-4">
@@ -65,34 +65,6 @@ const SeeItInAction = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .video-container {
-          position: relative;
-          padding: 2px;
-          border-radius: 0.75rem;
-          overflow: hidden;
-        }
-        
-        .rainbow-border {
-          position: absolute;
-          inset: -4px;
-          background: linear-gradient(90deg, #8B5CF6, #D946EF, #F97316, #0EA5E9, #33C3F0, #8B5CF6);
-          background-size: 400% 100%;
-          border-radius: 1rem;
-          animation: rainbow-move 6s linear infinite;
-          z-index: -1;
-        }
-        
-        @keyframes rainbow-move {
-          0% {
-            background-position: 0% 50%;
-          }
-          100% {
-            background-position: 400% 50%;
-          }
-        }
-      `}</style>
     </section>;
 };
 
