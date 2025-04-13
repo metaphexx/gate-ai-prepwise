@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Star } from 'lucide-react';
 import CTAButton from '../ui-custom/cta-button';
@@ -36,7 +35,7 @@ const testimonials = [
   {
     name: "Zihan",
     role: "Year 5 Student",
-    comment: "The instant marking was so helpful – I knew what to fix straight away. I ended up ranking in the top 10% for my school!",
+    comment: "The instant marking was so helpful, I knew what to fix straight away!",
     stars: 5
   },
   {
