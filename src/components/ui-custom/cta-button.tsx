@@ -31,7 +31,7 @@ const CTAButton = ({
           variant === 'primary' 
             ? 'bg-everest-blue text-white hover:bg-everest-blue/90' 
             : 'bg-white text-everest-blue border border-everest-blue hover:bg-gray-50',
-          size === 'default' ? 'px-6 py-3 text-sm' : 'px-8 py-4 text-base',
+          size === 'default' ? 'px-6 py-3 text-sm h-10' : 'px-8 py-4 text-base',
           rainbowBorder && 'bg-everest-blue text-white',
           className
         )}
