@@ -8,6 +8,7 @@ const FeatureShowcase = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Swapped: Screenshots now on the left */}
           <div className="lg:w-1/2">
             <div className="grid grid-cols-2 gap-4">
               {[
@@ -58,6 +59,7 @@ const FeatureShowcase = () => {
             </div>
           </div>
 
+          {/* Swapped: Content now on the right */}
           <div className="lg:w-1/2">
             <div className="mb-6">
               <span className="bg-everest-blue/10 text-everest-blue px-4 py-1 rounded-full text-sm font-medium flex items-center w-fit">
@@ -115,7 +117,7 @@ const FeatureShowcase = () => {
         .rainbow-border {
           position: absolute;
           inset: 0;
-          border: 7px solid transparent;
+          border: 3px solid transparent;
           border-radius: 0.75rem;
           background: linear-gradient(90deg, #8B5CF6, #D946EF, #F97316, #0EA5E9, #33C3F0, #8B5CF6) border-box;
           -webkit-mask: 
@@ -136,7 +138,7 @@ const FeatureShowcase = () => {
             background-position: 400% 50%;
           }
         }
-      ` }} />
+      `}} />
     </section>
   );
 };

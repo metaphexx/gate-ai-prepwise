@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CTAButton from '../ui-custom/cta-button';
 import { ArrowRight, Brain } from 'lucide-react';
@@ -45,10 +44,22 @@ const HeroSection = () => {
       </div>
 
       <style>{`
+        .dashboard-screenshot {
+          position: relative;
+          width: 100%;
+          transform: scale(1);
+          transition: transform 0.3s ease;
+          cursor: pointer;
+        }
+        
+        .dashboard-screenshot:hover {
+          transform: scale(1.05);
+        }
+        
         .rainbow-border {
           position: absolute;
           inset: 0;
-          border: 7px solid transparent;
+          border: 4px solid transparent;
           border-radius: 0.75rem;
           background: linear-gradient(90deg, #8B5CF6, #D946EF, #F97316, #0EA5E9, #33C3F0, #8B5CF6) border-box;
           -webkit-mask: 
