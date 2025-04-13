@@ -1,3 +1,4 @@
+
 import React from 'react';
 import CTAButton from '../ui-custom/cta-button';
 import { ArrowRight, Brain } from 'lucide-react';
@@ -42,7 +43,7 @@ const HeroSection = () => {
               <img 
                 src="/lovable-uploads/3bedcc62-2c03-4635-afca-b38b0f220736.png" 
                 alt="Everest Tutoring Dashboard" 
-                className="w-full h-auto scale-110"
+                className="w-full h-auto scale-100"  // Changed from scale-110 to scale-100
               />
               <div className="rainbow-border"></div>
             </div>
@@ -93,3 +94,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
