@@ -48,7 +48,7 @@ const HowItWorks = () => {
                 <step.icon className="w-8 h-8 text-everest-blue" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-center text-gray-800">
-                <span className="inline-block bg-everest-blue text-white w-7 h-7 rounded-full text-sm mr-2">
+                <span className="inline-block bg-everest-blue text-white w-7 h-7 rounded-full text-sm flex items-center justify-center mr-2">
                   {index + 1}
                 </span>
                 {step.title}
