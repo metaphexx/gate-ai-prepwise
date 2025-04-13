@@ -1,21 +1,14 @@
-
 import React from 'react';
 import { Play } from 'lucide-react';
-
 const SeeItInAction = () => {
-  return (
-    <section className="py-20 bg-gray-50">
+  return <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Left side - Content */}
             <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-                See It In Action
-              </h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Watch how a student improves their GATE score with our AI feedback system.
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">See It In Action!</h2>
+              <p className="text-lg text-gray-600 mb-8">Watch how our Writing AI Tool marks your writing, corrects your errors, rewrites your text for you & gives you an exemplar answer!</p>
               
               <div className="bg-white rounded-xl p-6 shadow-md">
                 <div className="space-y-6">
@@ -24,8 +17,8 @@ const SeeItInAction = () => {
                       1
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800">Initial Attempt</h3>
-                      <p className="text-gray-600">Score: 65%</p>
+                      <h3 className="font-semibold text-gray-800">Written Text Submitted</h3>
+                      <p className="text-gray-600">Writing Analysed & Marked </p>
                     </div>
                   </div>
                   
@@ -35,7 +28,7 @@ const SeeItInAction = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800">AI Feedback</h3>
-                      <p className="text-gray-600">3 key improvement areas</p>
+                      <p className="text-gray-600">Mistakes & Improvements identified</p>
                     </div>
                   </div>
                   
@@ -44,8 +37,8 @@ const SeeItInAction = () => {
                       3
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800">Second Attempt</h3>
-                      <p className="text-gray-600">Score: 89%</p>
+                      <h3 className="font-semibold text-gray-800">AI Rewritten Text & Exemplar Text</h3>
+                      <p className="text-gray-600">View your own text rewritten & how an expert writes a response!</p>
                     </div>
                   </div>
                 </div>
@@ -67,8 +60,6 @@ const SeeItInAction = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SeeItInAction;
