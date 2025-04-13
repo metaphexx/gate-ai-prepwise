@@ -118,17 +118,20 @@ const TestimonialsSection = () => {
           </CTAButton>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes autoScroll {
-          0% {
-            transform: translateX(0);
+      
+      {/* Standard React style element without jsx prop */}
+      <style>
+        {`
+          @keyframes autoScroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
           }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-      `}</style>
+        `}
+      </style>
     </section>
   );
 };
