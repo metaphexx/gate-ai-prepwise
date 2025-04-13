@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Check, Brain, Target } from 'lucide-react';
+import { CheckCircle2, Brain, Target } from 'lucide-react';
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
 const FeatureShowcase = () => {
@@ -8,7 +7,6 @@ const FeatureShowcase = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Left side - Content */}
           <div className="lg:w-1/2">
             <div className="mb-6">
               <span className="bg-everest-blue/10 text-everest-blue px-4 py-1 rounded-full text-sm font-medium flex items-center w-fit">
@@ -33,7 +31,7 @@ const FeatureShowcase = () => {
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
                   <div className="mr-3 mt-1">
-                    <Check className="h-5 w-5 text-everest-blue" />
+                    <CheckCircle2 className="h-5 w-5 text-everest-blue" />
                   </div>
                   <span className="text-gray-700">{item}</span>
                 </li>
@@ -50,7 +48,6 @@ const FeatureShowcase = () => {
             </div>
           </div>
 
-          {/* Right side - Screenshots */}
           <div className="lg:w-1/2">
             <div className="grid grid-cols-2 gap-4">
               {[
