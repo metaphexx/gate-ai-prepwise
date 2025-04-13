@@ -44,29 +44,47 @@ const HeroSection = () => {
         </div>
         <div className="md:w-1/2 md:pl-12 flex justify-center">
           <div className="w-full max-w-md relative">
-            <div className="bg-white rounded-xl shadow-2xl p-6 relative z-10">
-              <div className="bg-everest-light-blue/20 p-5 rounded-lg mb-4 flex items-center">
-                <Brain className="w-12 h-12 text-everest-blue mr-4" />
-                <div>
-                  <h3 className="text-gray-800 font-semibold">
-                    <span className="rainbow-text" data-text="AI-Powered Feedback">AI-Powered Feedback</span>
-                  </h3>
-                  <p className="text-gray-600 text-sm">Get instant expert guidance on your answers</p>
-                </div>
-              </div>
-              <div className="bg-gray-100 rounded-lg p-4 mb-4">
-                <p className="text-gray-800 text-sm font-medium mb-2">Sample Question:</p>
-                <p className="text-gray-700">Explain the relationship between temperature and the rate of a chemical reaction.</p>
-              </div>
-              <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
-                <p className="text-gray-800 text-sm font-medium">AI Feedback:</p>
-                <p className="text-gray-700 text-sm">Good answer! You've correctly explained the Arrhenius equation relationship. Consider adding how catalysts affect this relationship for a more complete response.</p>
-              </div>
+            <div className="dashboard-screenshot rounded-xl shadow-2xl overflow-hidden relative z-10">
+              <img 
+                src="/lovable-uploads/3bedcc62-2c03-4635-afca-b38b0f220736.png" 
+                alt="Everest Tutoring Dashboard" 
+                className="w-full h-auto"
+              />
+              <div className="rainbow-border"></div>
             </div>
             <div className="absolute inset-0 bg-everest-purple/20 rounded-xl transform translate-x-4 translate-y-4 -z-10"></div>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .dashboard-screenshot {
+          position: relative;
+        }
+        .rainbow-border {
+          position: absolute;
+          inset: 0;
+          border: 4px solid transparent;
+          border-radius: 0.75rem;
+          background: linear-gradient(90deg, #8B5CF6, #D946EF, #F97316, #0EA5E9, #33C3F0, #8B5CF6) border-box;
+          -webkit-mask: 
+            linear-gradient(#fff 0 0) padding-box, 
+            linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          background-size: 400% 100%;
+          animation: rainbow-animation 6s linear infinite;
+          pointer-events: none;
+        }
+        @keyframes rainbow-animation {
+          0% {
+            background-position: 0% 50%;
+          }
+          100% {
+            background-position: 400% 50%;
+          }
+        }
+      `}</style>
     </section>
   );
 };
