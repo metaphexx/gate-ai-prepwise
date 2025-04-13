@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Brain, CheckCircle2, Database, LineChart, Smartphone } from 'lucide-react';
 
@@ -95,7 +96,8 @@ const FeaturesSection = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>
+        {`
         .rainbow-border {
           border: 5px solid transparent;
           background: linear-gradient(90deg, #8B5CF6, #D946EF, #F97316, #0EA5E9, #33C3F0, #8B5CF6) border-box;
@@ -114,7 +116,8 @@ const FeaturesSection = () => {
             background-position: 400% 50%;
           }
         }
-      `}</style>
+      `}
+      </style>
     </section>
   );
 };
