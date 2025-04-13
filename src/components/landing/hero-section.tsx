@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CTAButton from '../ui-custom/cta-button';
 import { ArrowRight, Brain } from 'lucide-react';
@@ -40,11 +39,7 @@ const HeroSection = () => {
         <div className="md:w-1/2 md:pl-12 flex justify-center">
           <div className="w-full max-w-md relative mx-auto">
             <div className="dashboard-screenshot rounded-xl shadow-2xl overflow-hidden relative z-10">
-              <img 
-                src="/lovable-uploads/3bedcc62-2c03-4635-afca-b38b0f220736.png" 
-                alt="Everest Tutoring Dashboard" 
-                className="w-full h-auto scale-110" 
-              />
+              <img src="/lovable-uploads/3bedcc62-2c03-4635-afca-b38b0f220736.png" alt="Everest Tutoring Dashboard" className="w-full h-auto" />
               <div className="rainbow-border"></div>
             </div>
             <div className="absolute inset-0 bg-everest-purple/20 rounded-xl transform translate-x-4 translate-y-4 -z-10"></div>
