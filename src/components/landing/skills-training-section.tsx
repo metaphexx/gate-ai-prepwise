@@ -2,13 +2,12 @@
 import React from 'react';
 import { LineChart, Brain, CheckCircle2, Clock } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
-import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
 const SkillsTrainingSection = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left side - Content */}
           <div className="lg:w-1/2">
             <div className="mb-6">
@@ -56,7 +55,7 @@ const SkillsTrainingSection = () => {
               <CardContent className="p-0">
                 <div className="dashboard-screenshot rounded-xl shadow-md overflow-hidden relative z-10 cursor-pointer">
                   <img 
-                    src="/lovable-uploads/8bf0a71b-7f02-4df1-a0ae-189e46eb18b5.png" 
+                    src="/lovable-uploads/e0553bba-1e08-4845-8f24-c97dbb10847a.png" 
                     alt="Skills Training Interface" 
                     className="w-full h-auto"
                   />
@@ -68,7 +67,7 @@ const SkillsTrainingSection = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .dashboard-screenshot {
           position: relative;
           transform: scale(1);

@@ -2,14 +2,29 @@
 import React from 'react';
 import { Target, FileBarChart, CheckCircle2, LineChart } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
-import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
 const ExamSimulationSection = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Left side - Content */}
+          {/* Left side - Screenshots */}
+          <div className="lg:w-1/2">
+            <Card className="border-none shadow-none">
+              <CardContent className="p-0">
+                <div className="dashboard-screenshot rounded-xl shadow-md overflow-hidden relative z-10 cursor-pointer">
+                  <img 
+                    src="/lovable-uploads/e0553bba-1e08-4845-8f24-c97dbb10847a.png" 
+                    alt="Mock Exam Interface" 
+                    className="w-full h-auto"
+                  />
+                  <div className="rainbow-border"></div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Right side - Content */}
           <div className="lg:w-1/2">
             <div className="mb-6">
               <span className="bg-everest-blue/10 text-everest-blue px-4 py-1 rounded-full text-sm font-medium flex items-center w-fit">
@@ -49,26 +64,10 @@ const ExamSimulationSection = () => {
               </div>
             </div>
           </div>
-
-          {/* Right side - Screenshots */}
-          <div className="lg:w-1/2">
-            <Card className="border-none shadow-none">
-              <CardContent className="p-0">
-                <div className="dashboard-screenshot rounded-xl shadow-md overflow-hidden relative z-10 cursor-pointer">
-                  <img 
-                    src="/lovable-uploads/8bf0a71b-7f02-4df1-a0ae-189e46eb18b5.png" 
-                    alt="Mock Exam Interface" 
-                    className="w-full h-auto"
-                  />
-                  <div className="rainbow-border"></div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .dashboard-screenshot {
           position: relative;
           transform: scale(1);
