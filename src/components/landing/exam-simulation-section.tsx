@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Target, FileBarChart, CheckCircle2, LineChart } from 'lucide-react';
+import { Target, CheckCircle2 } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 
 const ExamSimulationSection = () => {
@@ -14,7 +14,7 @@ const ExamSimulationSection = () => {
               <CardContent className="p-0">
                 <div className="dashboard-screenshot rounded-xl shadow-md overflow-hidden relative z-10 cursor-pointer">
                   <img 
-                    src="/lovable-uploads/e0553bba-1e08-4845-8f24-c97dbb10847a.png" 
+                    src="/lovable-uploads/7649866b-107e-4268-9da9-9dca90dbc3fb.png" 
                     alt="Mock Exam Interface" 
                     className="w-full h-auto"
                   />
