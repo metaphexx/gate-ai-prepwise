@@ -12,7 +12,7 @@ const steps = [{
 }, {
   icon: Brain,
   title: 'Get Instant Feedback from AI',
-  description: 'Your responses are marked in real time with personalized suggestions for improvement.'
+  description: 'Writing responses are marked in real time with personalized suggestions for improvement. Ask our Smart Tutor for help with reading.'
 }, {
   icon: LineChart,
   title: 'Track Your Progress',
