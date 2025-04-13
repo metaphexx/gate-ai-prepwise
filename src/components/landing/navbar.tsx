@@ -14,6 +14,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [logoLoaded, setLogoLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,6 +47,10 @@ const Navbar = () => {
     setIsLoggedIn(false);
   };
 
+  const handleLogoLoad = () => {
+    setLogoLoaded(true);
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -57,12 +62,15 @@ const Navbar = () => {
           <div className="flex items-center">
             <a href="/" className="flex items-center">
               <img 
-                src="lovable-uploads/everest-tutoring-logo.png" 
+                src="lovable-uploads/821f8613-4281-44ea-a659-b16ba212c4b4.png" 
                 alt="Everest Tutoring Logo" 
-                className="h-10 w-auto object-contain"
+                className={`h-10 w-auto object-contain transition-opacity duration-300 ${
+                  logoLoaded ? 'opacity-100' : 'opacity-0'
+                }`}
+                onLoad={handleLogoLoad}
                 onError={(e) => {
                   console.error('Logo image failed to load');
-                  e.currentTarget.src = '/placeholder.svg'; // Fallback image
+                  e.currentTarget.src = '/placeholder.svg';
                 }}
               />
             </a>
