@@ -112,7 +112,7 @@ export default {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'hero-pattern': 'linear-gradient(to right, #6b46c1, #3182ce)',
-				'hero-blue-gradient': 'linear-gradient(135deg, #009dff 0%, #3182ce 100%)'
+				'hero-blue-gradient': 'linear-gradient(135deg, #f8fafc 0%, #ffffff 100%)'
 			}
 		}
 	},

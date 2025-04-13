@@ -12,13 +12,13 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="bg-hero-blue-gradient text-white py-20 md:py-28">
+    <section className="bg-white text-gray-800 py-20 md:py-28">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 mb-10 md:mb-0">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 animate-fade-in">
             Master the GATE Exam with AI-Powered Feedback.
           </h1>
-          <p className="text-lg md:text-xl mb-8 opacity-90">
+          <p className="text-lg md:text-xl mb-8 text-gray-700">
             Access over 1,000 expertly designed GATE-style questions with instant AI marking and feedback – built by Perth's top educators for high achievers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">

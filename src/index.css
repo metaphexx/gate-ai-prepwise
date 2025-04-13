@@ -117,6 +117,8 @@
   .rainbow-text {
     position: relative;
     display: inline-block;
+    color: #333; /* Text color */
+    font-weight: bold;
   }
   
   .rainbow-text::before {
@@ -126,28 +128,58 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      90deg,
-      #8B5CF6,
-      #D946EF,
-      #F97316,
-      #0EA5E9,
-      #33C3F0,
-      #8B5CF6
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-size: 400% 100%;
-    animation: rainbow-animation 6s linear infinite;
+    color: #333; /* Keep the same color as the original text */
+    text-shadow: 
+      -1px -1px 0 #8B5CF6, 
+      1px -1px 0 #D946EF, 
+      -1px 1px 0 #F97316, 
+      1px 1px 0 #0EA5E9, 
+      0 0 8px rgba(0,0,0,0.2);
+    animation: rainbow-text-shadow 8s linear infinite;
   }
   
-  @keyframes rainbow-animation {
+  @keyframes rainbow-text-shadow {
     0% {
-      background-position: 0% 50%;
+      text-shadow: 
+        -1px -1px 0 #8B5CF6, 
+        1px -1px 0 #D946EF, 
+        -1px 1px 0 #F97316, 
+        1px 1px 0 #0EA5E9;
+    }
+    20% {
+      text-shadow: 
+        -1px -1px 0 #D946EF, 
+        1px -1px 0 #F97316, 
+        -1px 1px 0 #0EA5E9, 
+        1px 1px 0 #8B5CF6;
+    }
+    40% {
+      text-shadow: 
+        -1px -1px 0 #F97316, 
+        1px -1px 0 #0EA5E9, 
+        -1px 1px 0 #8B5CF6, 
+        1px 1px 0 #D946EF;
+    }
+    60% {
+      text-shadow: 
+        -1px -1px 0 #0EA5E9, 
+        1px -1px 0 #8B5CF6, 
+        -1px 1px 0 #D946EF, 
+        1px 1px 0 #F97316;
+    }
+    80% {
+      text-shadow: 
+        -1px -1px 0 #8B5CF6, 
+        1px -1px 0 #D946EF, 
+        -1px 1px 0 #F97316, 
+        1px 1px 0 #0EA5E9;
     }
     100% {
-      background-position: 400% 50%;
+      text-shadow: 
+        -1px -1px 0 #8B5CF6, 
+        1px -1px 0 #D946EF, 
+        -1px 1px 0 #F97316, 
+        1px 1px 0 #0EA5E9;
     }
   }
 }
