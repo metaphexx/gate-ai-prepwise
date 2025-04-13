@@ -55,7 +55,7 @@ const SkillsTrainingSection = () => {
               <CardContent className="p-0">
                 <div className="dashboard-screenshot rounded-xl shadow-md overflow-hidden relative z-10 cursor-pointer">
                   <img 
-                    src="/lovable-uploads/e0553bba-1e08-4845-8f24-c97dbb10847a.png" 
+                    src="/lovable-uploads/468bf987-2aec-49af-93ce-48f54b742500.png" 
                     alt="Skills Training Interface" 
                     className="w-full h-auto"
                   />
