@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { Star } from 'lucide-react';
 import CTAButton from '../ui-custom/cta-button';
@@ -108,16 +109,16 @@ const TestimonialsSection = () => {
             <CarouselContent className="-ml-2 md:-ml-4 auto-scroll-testimonials">
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="h-full bg-white rounded-xl p-8 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                  <div className="h-full flex flex-col bg-white rounded-xl p-8 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                     <div className="flex mb-4">
                       {[...Array(testimonial.stars)].map((_, i) => (
                         <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <p className="text-gray-700 mb-6 italic h-24 overflow-hidden">
+                    <p className="text-gray-700 mb-6 italic flex-grow min-h-[84px]">
                       "{testimonial.comment}"
                     </p>
-                    <div className="flex items-center">
+                    <div className="flex items-center mt-auto">
                       <div className="w-10 h-10 bg-everest-blue/20 rounded-full flex items-center justify-center text-everest-blue font-bold">
                         {testimonial.name.charAt(0)}
                       </div>
