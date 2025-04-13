@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Brain, CheckCircle2, Database, LineChart, Smartphone } from 'lucide-react';
 
@@ -49,7 +48,6 @@ const FeaturesSection = () => {
               key={index} 
               className="bg-white rounded-xl p-6 shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg relative"
             >
-              {/* Rainbow border element */}
               <div className="rainbow-border absolute inset-0 rounded-xl pointer-events-none"></div>
               
               <div className="flex items-start mb-4 relative z-10">
@@ -76,7 +74,6 @@ const FeaturesSection = () => {
                 key={index + 3} 
                 className="bg-white rounded-xl p-6 shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg relative"
               >
-                {/* Rainbow border element */}
                 <div className="rainbow-border absolute inset-0 rounded-xl pointer-events-none"></div>
                 
                 <div className="flex items-start mb-4 relative z-10">
@@ -100,7 +97,7 @@ const FeaturesSection = () => {
 
       <style jsx>{`
         .rainbow-border {
-          border: 3px solid transparent;
+          border: 5px solid transparent;
           background: linear-gradient(90deg, #8B5CF6, #D946EF, #F97316, #0EA5E9, #33C3F0, #8B5CF6) border-box;
           -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
           -webkit-mask-composite: xor;
