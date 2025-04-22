@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -23,7 +22,11 @@ const Login = () => {
           <img 
             src="https://images.unsplash.com/photo-1487741026797-7cab44a7eedc"
             alt="Mount Everest peaks" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover brightness-75"
+            onError={(e) => {
+              console.error('Image failed to load', e);
+              (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e'; // Fallback mountain image
+            }}
           />
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
