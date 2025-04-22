@@ -1,44 +1,27 @@
-
 import React from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Eye, EyeOff, Mail, Lock, User } from "lucide-react";
 import { Link } from 'react-router-dom';
 import SocialLoginButton from '@/components/ui-custom/social-login-button';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 const SignUp = () => {
   const [showPassword, setShowPassword] = React.useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle signup logic here when needed
   };
-
   const yearLevels = ["Year 4", "Year 5", "Year 6"];
-
-  return (
-    <div className="min-h-screen w-full flex">
+  return <div className="min-h-screen w-full flex">
       {/* Left side - Mountain Graphic */}
       <div className="hidden lg:block lg:w-1/2 bg-[#EEF1FF] relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-[#009dff]/80 to-[#009dff]/60"></div>
-          <img 
-            src="/lovable-uploads/e3cc23fd-99b9-4f4f-80e1-d8a5c738a0f2.png"
-            alt="Snowy mountain peaks landscape" 
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              console.error('Image failed to load', e);
-              (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb';
-            }}
-          />
+          <img src="/lovable-uploads/e3cc23fd-99b9-4f4f-80e1-d8a5c738a0f2.png" alt="Snowy mountain peaks landscape" className="w-full h-full object-cover" onError={e => {
+          console.error('Image failed to load', e);
+          (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb';
+        }} />
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center space-y-4 p-8 bg-white/20 backdrop-blur-md rounded-lg border border-white/30 shadow-lg">
@@ -52,20 +35,13 @@ const SignUp = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center space-y-6">
-            <img
-              src="/lovable-uploads/46da1665-1306-4b10-b872-1c9c8b42d741.png"
-              alt="Everest Tutoring"
-              className="h-20 w-auto mx-auto object-contain"
-              onError={(e) => {
-                console.error('Logo image failed to load');
-                (e.target as HTMLImageElement).src = '/placeholder.svg';
-              }}
-            />
+            <img src="/lovable-uploads/46da1665-1306-4b10-b872-1c9c8b42d741.png" alt="Everest Tutoring" className="h-20 w-auto mx-auto object-contain" onError={e => {
+            console.error('Logo image failed to load');
+            (e.target as HTMLImageElement).src = '/placeholder.svg';
+          }} />
             <div>
-              <h1 className="text-2xl font-semibold tracking-tight">Sign Up</h1>
-              <p className="text-sm text-muted-foreground mt-2">
-                Create your account to get started
-              </p>
+              <h1 className="text-2xl font-semibold tracking-tight">Sign up</h1>
+              <p className="text-sm text-muted-foreground mt-2">Create your account to get started!</p>
             </div>
           </div>
 
@@ -94,13 +70,7 @@ const SignUp = () => {
                 </label>
                 <div className="relative">
                   <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <Input
-                    id="firstName"
-                    type="text"
-                    placeholder="John"
-                    className="pl-10"
-                    required
-                  />
+                  <Input id="firstName" type="text" placeholder="John" className="pl-10" required />
                 </div>
               </div>
 
@@ -110,13 +80,7 @@ const SignUp = () => {
                 </label>
                 <div className="relative">
                   <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <Input
-                    id="lastName"
-                    type="text"
-                    placeholder="Doe"
-                    className="pl-10"
-                    required
-                  />
+                  <Input id="lastName" type="text" placeholder="Doe" className="pl-10" required />
                 </div>
               </div>
             </div>
@@ -130,11 +94,9 @@ const SignUp = () => {
                   <SelectValue placeholder="Select your year level" />
                 </SelectTrigger>
                 <SelectContent>
-                  {yearLevels.map((year) => (
-                    <SelectItem key={year} value={year.toLowerCase().replace(" ", "-")}>
+                  {yearLevels.map(year => <SelectItem key={year} value={year.toLowerCase().replace(" ", "-")}>
                       {year}
-                    </SelectItem>
-                  ))}
+                    </SelectItem>)}
                 </SelectContent>
               </Select>
             </div>
@@ -145,13 +107,7 @@ const SignUp = () => {
               </label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="name@example.com"
-                  className="pl-10"
-                  required
-                />
+                <Input id="email" type="email" placeholder="name@example.com" className="pl-10" required />
               </div>
             </div>
 
@@ -161,23 +117,9 @@ const SignUp = () => {
               </label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <Input
-                  id="password"
-                  type={showPassword ? "text" : "password"}
-                  placeholder="Create a password"
-                  className="pl-10 pr-10"
-                  required
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                >
-                  {showPassword ? (
-                    <EyeOff className="h-4 w-4" />
-                  ) : (
-                    <Eye className="h-4 w-4" />
-                  )}
+                <Input id="password" type={showPassword ? "text" : "password"} placeholder="Create a password" className="pl-10 pr-10" required />
+                <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
+                  {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </button>
               </div>
             </div>
@@ -188,23 +130,9 @@ const SignUp = () => {
               </label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <Input
-                  id="confirmPassword"
-                  type={showConfirmPassword ? "text" : "password"}
-                  placeholder="Confirm your password"
-                  className="pl-10 pr-10"
-                  required
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                >
-                  {showConfirmPassword ? (
-                    <EyeOff className="h-4 w-4" />
-                  ) : (
-                    <Eye className="h-4 w-4" />
-                  )}
+                <Input id="confirmPassword" type={showConfirmPassword ? "text" : "password"} placeholder="Confirm your password" className="pl-10 pr-10" required />
+                <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
+                  {showConfirmPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </button>
               </div>
             </div>
@@ -222,8 +150,6 @@ const SignUp = () => {
           </form>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default SignUp;
