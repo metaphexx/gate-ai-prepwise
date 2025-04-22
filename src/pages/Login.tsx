@@ -42,7 +42,7 @@ const Login = () => {
         <div className="w-full max-w-md space-y-8">
           <div className="text-center space-y-6">
             <img
-              src="/lovable-uploads/00a16d90-cc2f-42e6-925c-f8bc093b9143.png"
+              src="/lovable-uploads/46da1665-1306-4b10-b872-1c9c8b42d741.png"
               alt="Everest Tutoring"
               className="h-20 w-auto mx-auto object-contain"
               onError={(e) => {
