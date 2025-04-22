@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -32,7 +33,7 @@ const Login = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center space-y-4 p-8 bg-white/20 backdrop-blur-md rounded-lg border border-white/30 shadow-lg">
             <h2 className="text-3xl font-bold text-white drop-shadow-md">Welcome Back</h2>
-            <p className="text-xl text-white drop-shadow-md">Start your learning journey today!</p>
+            <p className="text-xl text-white drop-shadow-md">Continue your learning journey today!</p>
           </div>
         </div>
       </div>
