@@ -5,6 +5,7 @@ import { Eye, EyeOff, Mail, Lock, User } from "lucide-react";
 import { Link } from 'react-router-dom';
 import SocialLoginButton from '@/components/ui-custom/social-login-button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
 const SignUp = () => {
   const [showPassword, setShowPassword] = React.useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
@@ -25,8 +26,8 @@ const SignUp = () => {
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center space-y-4 p-8 bg-white/20 backdrop-blur-md rounded-lg border border-white/30 shadow-lg">
-            <h2 className="text-3xl font-bold text-white drop-shadow-md">Join Our Community</h2>
-            <p className="text-xl text-white drop-shadow-md">Begin your learning journey today!</p>
+            <h2 className="text-3xl font-bold text-white drop-shadow-md">Your GATE Success Starts Here</h2>
+            <p className="text-xl text-white drop-shadow-md">Join the platform built for GATE students.</p>
           </div>
         </div>
       </div>
@@ -46,9 +47,9 @@ const SignUp = () => {
           </div>
 
           <div className="space-y-4">
-            <SocialLoginButton provider="google" text="Sign Up with Google" variant="colored" />
-            <SocialLoginButton provider="facebook" text="Sign Up with Facebook" variant="colored" />
-            <SocialLoginButton provider="apple" text="Sign Up with Apple" variant="colored" />
+            <SocialLoginButton provider="google" text="Sign up with Google" variant="colored" />
+            <SocialLoginButton provider="facebook" text="Sign up with Facebook" variant="colored" />
+            <SocialLoginButton provider="apple" text="Sign up with Apple" variant="colored" />
           </div>
 
           <div className="relative">
@@ -144,7 +145,7 @@ const SignUp = () => {
             <p className="text-sm text-center text-muted-foreground">
               Already have an account?{" "}
               <Link to="/login" className="text-[#009dff] hover:text-[#009dff]/90 hover:underline">
-                Login
+                Login!
               </Link>
             </p>
           </form>
@@ -152,4 +153,5 @@ const SignUp = () => {
       </div>
     </div>;
 };
+
 export default SignUp;
