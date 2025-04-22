@@ -21,7 +21,7 @@ const Login = () => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-[#009dff]/80 to-[#009dff]/60"></div>
           <img 
-            src="/lovable-uploads/6d436f8a-9391-4211-ada7-1710fe9307da.png"
+            src="/lovable-uploads/e3cc23fd-99b9-4f4f-80e1-d8a5c738a0f2.png"
             alt="Snowy mountain peaks landscape" 
             className="w-full h-full object-cover"
             onError={(e) => {
