@@ -16,13 +16,13 @@ const Login = () => {
 
   return (
     <div className="min-h-screen w-full flex">
-      {/* Left side - Decorative Pattern */}
+      {/* Left side - Mountain Graphic */}
       <div className="hidden lg:block lg:w-1/2 bg-[#EEF1FF] relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-[#009dff]/80 to-[#009dff]/60"></div>
           <img 
-            src="https://images.unsplash.com/photo-1441057206919-63d19fac2369"
-            alt="Decorative learning illustration" 
+            src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb"
+            alt="Mountain landscape with river" 
             className="w-full h-full object-cover"
           />
         </div>
