@@ -44,9 +44,13 @@ const Login = () => {
           <div className="text-center space-y-6">
             <div className="w-full flex justify-center bg-white p-4 rounded-lg shadow-sm">
               <img
-                src="/lovable-uploads/everest-tutoring-logo.png"
+                src="/lovable-uploads/dc655dee-f84f-4553-865c-e1dd445b7ba1.png"
                 alt="Everest Tutoring"
                 className="h-20 w-auto object-contain"
+                onError={(e) => {
+                  console.error('Logo image failed to load');
+                  (e.target as HTMLImageElement).src = '/placeholder.svg';
+                }}
               />
             </div>
             <div>
