@@ -1,5 +1,4 @@
-
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Navbar from '../components/landing/navbar';
 import HeroSection from '../components/landing/hero-section';
 import HowItWorks from '../components/landing/how-it-works';
@@ -17,47 +16,69 @@ import Footer from '../components/landing/footer';
 
 const Index = () => {
   useEffect(() => {
-    // Simple animation on scroll effect
-    const animateOnScroll = () => {
-      const elements = document.querySelectorAll('.animate-on-scroll');
-      
-      elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-        
-        if (elementTop < window.innerHeight - elementVisible) {
-          element.classList.add('animate');
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
         }
       });
     };
-    
-    // Run once on load
-    animateOnScroll();
-    
-    // Add scroll event listener
-    window.addEventListener('scroll', animateOnScroll);
-    
-    // Clean up
-    return () => {
-      window.removeEventListener('scroll', animateOnScroll);
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
     };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    
+    // Observe all sections with the animate-on-scroll class
+    document.querySelectorAll('.animate-on-scroll').forEach(element => {
+      observer.observe(element);
+    });
+    
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div className="min-h-screen">
       <Navbar />
-      <HeroSection />
-      <HowItWorks />
-      <SeeItInAction />
-      <FeatureShowcase />
-      <ExamSimulationSection />
-      <SkillsTrainingSection />
-      <FeaturesSection />
-      <PricingSection />
-      <TrustSignals />
-      <TestimonialsSection />
-      <FaqSection />
-      <FinalCta />
+      <div className="animate-on-scroll">
+        <HeroSection />
+      </div>
+      <div className="animate-on-scroll translate-y-4 opacity-0 transition-all duration-700">
+        <HowItWorks />
+      </div>
+      <div className="animate-on-scroll translate-y-4 opacity-0 transition-all duration-700 delay-100">
+        <SeeItInAction />
+      </div>
+      <div className="animate-on-scroll translate-y-4 opacity-0 transition-all duration-700 delay-200">
+        <FeatureShowcase />
+      </div>
+      <div className="animate-on-scroll translate-y-4 opacity-0 transition-all duration-700">
+        <ExamSimulationSection />
+      </div>
+      <div className="animate-on-scroll translate-y-4 opacity-0 transition-all duration-700 delay-100">
+        <SkillsTrainingSection />
+      </div>
+      <div className="animate-on-scroll translate-y-4 opacity-0 transition-all duration-700 delay-200">
+        <FeaturesSection />
+      </div>
+      <div className="animate-on-scroll translate-y-4 opacity-0 transition-all duration-700">
+        <PricingSection />
+      </div>
+      <div className="animate-on-scroll translate-y-4 opacity-0 transition-all duration-700 delay-100">
+        <TrustSignals />
+      </div>
+      <div className="animate-on-scroll translate-y-4 opacity-0 transition-all duration-700 delay-200">
+        <TestimonialsSection />
+      </div>
+      <div className="animate-on-scroll translate-y-4 opacity-0 transition-all duration-700">
+        <FaqSection />
+      </div>
+      <div className="animate-on-scroll translate-y-4 opacity-0 transition-all duration-700">
+        <FinalCta />
+      </div>
       <Footer />
     </div>
   );
