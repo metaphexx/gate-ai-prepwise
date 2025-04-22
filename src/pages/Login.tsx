@@ -59,9 +59,9 @@ const Login = () => {
           </div>
 
           <div className="space-y-4">
-            <SocialLoginButton provider="google" variant="colored" />
-            <SocialLoginButton provider="facebook" variant="colored" />
-            <SocialLoginButton provider="apple" variant="colored" />
+            <SocialLoginButton provider="google" text="Login with Google" variant="colored" />
+            <SocialLoginButton provider="facebook" text="Login with Facebook" variant="colored" />
+            <SocialLoginButton provider="apple" text="Login with Apple" variant="colored" />
           </div>
 
           <div className="relative">

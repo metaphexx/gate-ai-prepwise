@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Facebook, Apple } from "lucide-react";
@@ -7,9 +6,10 @@ import { cn } from "@/lib/utils";
 interface SocialLoginButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   provider: 'google' | 'facebook' | 'apple';
   variant?: 'default' | 'colored';
+  text?: string;
 }
 
-const SocialLoginButton = ({ provider, variant = 'default', className, ...props }: SocialLoginButtonProps) => {
+const SocialLoginButton = ({ provider, variant = 'default', text, className, ...props }: SocialLoginButtonProps) => {
   const getProviderIcon = () => {
     switch (provider) {
       case 'google':
@@ -54,6 +54,10 @@ const SocialLoginButton = ({ provider, variant = 'default', className, ...props 
     return '';
   };
 
+  const getDefaultText = () => {
+    return `Continue with ${provider.charAt(0).toUpperCase() + provider.slice(1)}`;
+  };
+
   return (
     <Button
       variant={variant === 'colored' ? 'outline' : 'outline'}
@@ -65,10 +69,9 @@ const SocialLoginButton = ({ provider, variant = 'default', className, ...props 
       {...props}
     >
       {getProviderIcon()}
-      Continue with {provider.charAt(0).toUpperCase() + provider.slice(1)}
+      {text || getDefaultText()}
     </Button>
   );
 };
 
 export default SocialLoginButton;
-
