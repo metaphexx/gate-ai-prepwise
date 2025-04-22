@@ -21,8 +21,8 @@ const Login = () => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-[#009dff]/80 to-[#009dff]/60"></div>
           <img 
-            src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb"
-            alt="Mountain landscape with river" 
+            src="https://images.unsplash.com/photo-1487741026797-7cab44a7eedc"
+            alt="Mount Everest peaks" 
             className="w-full h-full object-cover"
           />
         </div>
