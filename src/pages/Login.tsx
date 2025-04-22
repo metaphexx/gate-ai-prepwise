@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -38,11 +37,11 @@ const Login = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center space-y-6">
-            <div className="w-full flex justify-center bg-white p-4 rounded-lg shadow-sm">
+            <div className="w-full flex justify-center bg-white p-6 rounded-lg shadow-md">
               <img
                 src="/lovable-uploads/everest-tutoring-logo.png"
                 alt="Everest Tutoring"
-                className="h-20 w-auto object-contain"
+                className="h-24 w-auto object-contain max-w-full"
               />
             </div>
             <div>
