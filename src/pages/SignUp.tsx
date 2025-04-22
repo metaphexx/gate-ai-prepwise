@@ -27,7 +27,7 @@ const SignUp = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center space-y-4 p-8 bg-white/20 backdrop-blur-md rounded-lg border border-white/30 shadow-lg">
             <h2 className="text-3xl font-bold text-white drop-shadow-md">Your GATE Success Starts Here</h2>
-            <p className="text-xl text-white drop-shadow-md">Join the platform built for GATE students.</p>
+            <p className="text-xl text-white drop-shadow-md">Join the platform built for GATE students!</p>
           </div>
         </div>
       </div>
