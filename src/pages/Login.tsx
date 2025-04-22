@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -42,17 +41,15 @@ const Login = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center space-y-6">
-            <div className="w-full flex justify-center bg-white p-4 rounded-lg shadow-sm">
-              <img
-                src="/lovable-uploads/dc655dee-f84f-4553-865c-e1dd445b7ba1.png"
-                alt="Everest Tutoring"
-                className="h-20 w-auto object-contain"
-                onError={(e) => {
-                  console.error('Logo image failed to load');
-                  (e.target as HTMLImageElement).src = '/placeholder.svg';
-                }}
-              />
-            </div>
+            <img
+              src="/lovable-uploads/00a16d90-cc2f-42e6-925c-f8bc093b9143.png"
+              alt="Everest Tutoring"
+              className="h-20 w-auto mx-auto object-contain"
+              onError={(e) => {
+                console.error('Logo image failed to load');
+                (e.target as HTMLImageElement).src = '/placeholder.svg';
+              }}
+            />
             <div>
               <h1 className="text-2xl font-semibold tracking-tight">Login</h1>
               <p className="text-sm text-muted-foreground mt-2">
