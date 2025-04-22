@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -20,13 +21,9 @@ const Login = () => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-[#009dff]/80 to-[#009dff]/60"></div>
           <img 
-            src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05"
-            alt="Mountain peak summit" 
-            className="w-full h-full object-cover brightness-75"
-            onError={(e) => {
-              console.error('Image failed to load', e);
-              (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1458668383970-8ddd3927deed'; // Fallback mountain peak image
-            }}
+            src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb"
+            alt="Mountain landscape with river" 
+            className="w-full h-full object-cover"
           />
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
