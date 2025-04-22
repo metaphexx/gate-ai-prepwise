@@ -15,7 +15,26 @@ const Login = () => {
 
   return (
     <div className="min-h-screen w-full flex">
-      {/* Left side - Login Form */}
+      {/* Left side - Decorative Pattern */}
+      <div className="hidden lg:block lg:w-1/2 bg-[#EEF1FF] relative overflow-hidden">
+        <div className="absolute inset-0 pattern-grid-lg opacity-10 text-primary"></div>
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" 
+            alt="Decorative workspace" 
+            className="w-full h-full object-cover opacity-75"
+          />
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center space-y-4 p-8 bg-white/10 backdrop-blur-sm rounded-lg">
+            <h2 className="text-3xl font-bold text-foreground">Welcome Back</h2>
+            <p className="text-lg text-foreground/80">Start your learning journey today</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Right side - Login Form */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center">
@@ -95,15 +114,6 @@ const Login = () => {
             </p>
           </form>
         </div>
-      </div>
-
-      {/* Right side - Decorative Pattern */}
-      <div className="hidden lg:block lg:w-1/2 bg-[#EEF1FF] relative overflow-hidden">
-        <div className="absolute inset-0 pattern-grid-lg opacity-10 text-primary"></div>
-        <div 
-          className="absolute inset-0 bg-[url('lovable-uploads/47398b2e-5c28-434c-ab72-b57c81ada8bd.png')] 
-                     bg-no-repeat bg-center bg-contain opacity-50"
-        ></div>
       </div>
     </div>
   );
