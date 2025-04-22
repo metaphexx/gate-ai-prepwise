@@ -20,13 +20,13 @@ const Login = () => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-[#009dff]/80 to-[#009dff]/60"></div>
           <img 
-            src="https://images.unsplash.com/photo-1441057206919-63d19fac2369"
+            src="https://images.unsplash.com/photo-1501286353178-1ec881214838"
             alt="Decorative learning illustration" 
             className="w-full h-full object-cover"
           />
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center space-y-4 p-8 bg-white/20 backdrop-blur-md rounded-lg border border-white/30 shadow-lg">
+          <div className="text-center space-y-4 p-8 bg-white/20 backdrop-blur-md rounded-lg border border-white/30">
             <h2 className="text-3xl font-bold text-white drop-shadow-md">Welcome Back</h2>
             <p className="text-xl text-white drop-shadow-md">Start your learning journey today</p>
           </div>
@@ -37,11 +37,11 @@ const Login = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center space-y-6">
-            <div className="w-full flex justify-center bg-white p-8 rounded-lg shadow-lg">
+            <div className="w-full flex justify-center">
               <img
-                src="/lovable-uploads/97ba3476-314d-480b-a161-be6fbd5ec608.png"
+                src="/lovable-uploads/everest-tutoring-logo.png"
                 alt="Everest Tutoring"
-                className="h-32 w-auto object-contain max-w-full"
+                className="h-20 w-auto object-contain"
               />
             </div>
             <div>
