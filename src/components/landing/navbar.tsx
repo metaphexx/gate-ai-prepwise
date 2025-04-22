@@ -9,6 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -103,10 +104,12 @@ const Navbar = () => {
                 <Button 
                   variant="ghost" 
                   className="font-medium text-gray-700 hover:text-primary"
-                  onClick={handleLogin}
+                  asChild
                 >
-                  <LogIn className="mr-2 h-4 w-4" />
-                  Log in
+                  <Link to="/login">
+                    <LogIn className="mr-2 h-4 w-4" />
+                    Log in
+                  </Link>
                 </Button>
                 <CTAButton 
                   size="default" 
@@ -180,10 +183,12 @@ const Navbar = () => {
                     <Button 
                       variant="ghost" 
                       className="font-medium text-gray-700 w-full justify-start py-2"
-                      onClick={handleLogin}
+                      asChild
                     >
-                      <LogIn className="mr-2 h-4 w-4" />
-                      Log in
+                      <Link to="/login">
+                        <LogIn className="mr-2 h-4 w-4" />
+                        Log in
+                      </Link>
                     </Button>
                   </li>
                   <li className="pt-2">
