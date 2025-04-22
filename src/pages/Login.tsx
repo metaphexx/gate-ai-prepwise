@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -17,19 +18,18 @@ const Login = () => {
     <div className="min-h-screen w-full flex">
       {/* Left side - Decorative Pattern */}
       <div className="hidden lg:block lg:w-1/2 bg-[#EEF1FF] relative overflow-hidden">
-        <div className="absolute inset-0 pattern-grid-lg opacity-10 text-[#009dff]"></div>
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#009dff]/20 to-[#009dff]/5"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#009dff]/80 to-[#009dff]/60"></div>
           <img 
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" 
+            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
             alt="Decorative workspace" 
-            className="w-full h-full object-cover opacity-75"
+            className="w-full h-full object-cover"
           />
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center space-y-4 p-8 bg-white/10 backdrop-blur-sm rounded-lg">
-            <h2 className="text-3xl font-bold text-foreground">Welcome Back</h2>
-            <p className="text-lg text-foreground/80">Start your learning journey today</p>
+          <div className="text-center space-y-4 p-8 bg-white/20 backdrop-blur-md rounded-lg border border-white/30">
+            <h2 className="text-3xl font-bold text-white">Welcome Back</h2>
+            <p className="text-xl text-white/90">Start your learning journey today</p>
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@ const Login = () => {
             <img
               src="/lovable-uploads/everest-tutoring-logo.png"
               alt="Everest Tutoring"
-              className="h-12 mx-auto"
+              className="h-16 mx-auto"
             />
             <div>
               <h1 className="text-2xl font-semibold tracking-tight">Login</h1>
@@ -98,7 +98,7 @@ const Login = () => {
                 </label>
                 <Link
                   to="/forgot-password"
-                  className="text-sm text-primary hover:text-primary/90 hover:underline"
+                  className="text-sm text-[#009dff] hover:text-[#009dff]/90 hover:underline"
                 >
                   Forgot password?
                 </Link>
@@ -132,7 +132,7 @@ const Login = () => {
 
             <p className="text-sm text-center text-muted-foreground">
               Don't have an account?{" "}
-              <Link to="/signup" className="text-primary hover:text-primary/90 hover:underline">
+              <Link to="/signup" className="text-[#009dff] hover:text-[#009dff]/90 hover:underline">
                 Sign up
               </Link>
             </p>
