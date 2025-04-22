@@ -6,14 +6,15 @@ import { cn } from "@/lib/utils";
 
 interface SocialLoginButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   provider: 'google' | 'facebook' | 'apple';
+  variant?: 'default' | 'colored';
 }
 
-const SocialLoginButton = ({ provider, className, ...props }: SocialLoginButtonProps) => {
+const SocialLoginButton = ({ provider, variant = 'default', className, ...props }: SocialLoginButtonProps) => {
   const getProviderIcon = () => {
     switch (provider) {
       case 'google':
         return (
-          <svg className="h-4 w-4" viewBox="0 0 24 24">
+          <svg className="h-5 w-5" viewBox="0 0 24 24">
             <path
               d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
               fill="#4285F4"
@@ -33,24 +34,38 @@ const SocialLoginButton = ({ provider, className, ...props }: SocialLoginButtonP
           </svg>
         );
       case 'facebook':
-        return <Facebook className="h-4 w-4" />;
+        return <Facebook className="h-5 w-5" />;
       case 'apple':
-        return <Apple className="h-4 w-4" />;
+        return <Apple className="h-5 w-5" />;
     }
   };
 
-  const getProviderName = () => {
-    return provider.charAt(0).toUpperCase() + provider.slice(1);
+  const getButtonStyles = () => {
+    if (variant === 'colored') {
+      switch (provider) {
+        case 'google':
+          return 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50';
+        case 'facebook':
+          return 'bg-[#1877f2] text-white hover:bg-[#1877f2]/90 border-0';
+        case 'apple':
+          return 'bg-black text-white hover:bg-black/90 border-0';
+      }
+    }
+    return '';
   };
 
   return (
     <Button
-      variant="outline"
-      className={cn("w-full justify-center gap-2", className)}
+      variant={variant === 'colored' ? 'custom' : 'outline'}
+      className={cn(
+        "w-full justify-center gap-2 font-medium",
+        getButtonStyles(),
+        className
+      )}
       {...props}
     >
       {getProviderIcon()}
-      Continue with {getProviderName()}
+      Continue with {provider.charAt(0).toUpperCase() + provider.slice(1)}
     </Button>
   );
 };

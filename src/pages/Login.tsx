@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -21,15 +20,15 @@ const Login = () => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-[#009dff]/80 to-[#009dff]/60"></div>
           <img 
-            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
-            alt="Decorative workspace" 
+            src="https://images.unsplash.com/photo-1501286353178-1ec881214838"
+            alt="Decorative learning illustration" 
             className="w-full h-full object-cover"
           />
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center space-y-4 p-8 bg-white/20 backdrop-blur-md rounded-lg border border-white/30">
-            <h2 className="text-3xl font-bold text-white">Welcome Back</h2>
-            <p className="text-xl text-white/90">Start your learning journey today</p>
+            <h2 className="text-3xl font-bold text-white drop-shadow-md">Welcome Back</h2>
+            <p className="text-xl text-white drop-shadow-md">Start your learning journey today</p>
           </div>
         </div>
       </div>
@@ -38,11 +37,13 @@ const Login = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center space-y-6">
-            <img
-              src="/lovable-uploads/everest-tutoring-logo.png"
-              alt="Everest Tutoring"
-              className="h-16 mx-auto"
-            />
+            <div className="w-full flex justify-center">
+              <img
+                src="/lovable-uploads/everest-tutoring-logo.png"
+                alt="Everest Tutoring"
+                className="h-20 w-auto object-contain"
+              />
+            </div>
             <div>
               <h1 className="text-2xl font-semibold tracking-tight">Login</h1>
               <p className="text-sm text-muted-foreground mt-2">
@@ -52,9 +53,9 @@ const Login = () => {
           </div>
 
           <div className="space-y-4">
-            <SocialLoginButton provider="google" />
-            <SocialLoginButton provider="facebook" />
-            <SocialLoginButton provider="apple" />
+            <SocialLoginButton provider="google" variant="colored" />
+            <SocialLoginButton provider="facebook" variant="colored" />
+            <SocialLoginButton provider="apple" variant="colored" />
           </div>
 
           <div className="relative">
