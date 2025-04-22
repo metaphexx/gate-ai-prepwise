@@ -40,15 +40,17 @@ const SocialLoginButton = ({ provider, variant = 'default', className, ...props 
     }
   };
 
+  // Instead of using a custom variant, we'll use the supported variants
+  // and apply additional styling through className
   const getButtonStyles = () => {
     if (variant === 'colored') {
       switch (provider) {
         case 'google':
           return 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50';
         case 'facebook':
-          return 'bg-[#1877f2] text-white hover:bg-[#1877f2]/90 border-0';
+          return 'bg-[#1877f2] text-white hover:bg-[#1877f2]/90';
         case 'apple':
-          return 'bg-black text-white hover:bg-black/90 border-0';
+          return 'bg-black text-white hover:bg-black/90';
       }
     }
     return '';
@@ -56,7 +58,8 @@ const SocialLoginButton = ({ provider, variant = 'default', className, ...props 
 
   return (
     <Button
-      variant={variant === 'colored' ? 'custom' : 'outline'}
+      // Use an existing variant instead of 'custom'
+      variant={variant === 'colored' ? 'outline' : 'outline'}
       className={cn(
         "w-full justify-center gap-2 font-medium",
         getButtonStyles(),
