@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
 import { Link } from 'react-router-dom';
+import SocialLoginButton from '@/components/ui-custom/social-login-button';
 
 const Login = () => {
   const [showPassword, setShowPassword] = React.useState(false);
@@ -17,11 +17,11 @@ const Login = () => {
     <div className="min-h-screen w-full flex">
       {/* Left side - Decorative Pattern */}
       <div className="hidden lg:block lg:w-1/2 bg-[#EEF1FF] relative overflow-hidden">
-        <div className="absolute inset-0 pattern-grid-lg opacity-10 text-primary"></div>
+        <div className="absolute inset-0 pattern-grid-lg opacity-10 text-[#009dff]"></div>
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#009dff]/20 to-[#009dff]/5"></div>
           <img 
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" 
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" 
             alt="Decorative workspace" 
             className="w-full h-full object-cover opacity-75"
           />
@@ -37,11 +37,35 @@ const Login = () => {
       {/* Right side - Login Form */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md space-y-8">
-          <div className="text-center">
-            <h1 className="text-2xl font-semibold tracking-tight">Login</h1>
-            <p className="text-sm text-muted-foreground mt-2">
-              Enter your email below to login to your account
-            </p>
+          <div className="text-center space-y-6">
+            <img
+              src="/lovable-uploads/everest-tutoring-logo.png"
+              alt="Everest Tutoring"
+              className="h-12 mx-auto"
+            />
+            <div>
+              <h1 className="text-2xl font-semibold tracking-tight">Login</h1>
+              <p className="text-sm text-muted-foreground mt-2">
+                Enter your email below to login to your account
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <SocialLoginButton provider="google" />
+            <SocialLoginButton provider="facebook" />
+            <SocialLoginButton provider="apple" />
+          </div>
+
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center">
+              <span className="w-full border-t" />
+            </div>
+            <div className="relative flex justify-center text-xs uppercase">
+              <span className="bg-background px-2 text-muted-foreground">
+                Or continue with
+              </span>
+            </div>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -102,7 +126,7 @@ const Login = () => {
               </div>
             </div>
 
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full bg-[#009dff] hover:bg-[#009dff]/90">
               Sign in
             </Button>
 
