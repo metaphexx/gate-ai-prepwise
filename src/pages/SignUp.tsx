@@ -5,7 +5,6 @@ import { Eye, EyeOff, Mail, Lock, User } from "lucide-react";
 import { Link } from 'react-router-dom';
 import SocialLoginButton from '@/components/ui-custom/social-login-button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-
 const SignUp = () => {
   const [showPassword, setShowPassword] = React.useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
@@ -27,7 +26,7 @@ const SignUp = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center space-y-4 p-8 bg-white/20 backdrop-blur-md rounded-lg border border-white/30 shadow-lg">
             <h2 className="text-3xl font-bold text-white drop-shadow-md">Your GATE Success Starts Here</h2>
-            <p className="text-xl text-white drop-shadow-md">Join the platform built for GATE students.</p>
+            <p className="text-xl text-white drop-shadow-md">Join the platform built for GATE students!</p>
           </div>
         </div>
       </div>
@@ -153,5 +152,4 @@ const SignUp = () => {
       </div>
     </div>;
 };
-
 export default SignUp;
