@@ -37,11 +37,11 @@ const Login = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center space-y-6">
-            <div className="w-full flex justify-center bg-white p-6 rounded-lg shadow-md">
+            <div className="w-full flex justify-center bg-white p-8 rounded-lg shadow-lg">
               <img
-                src="/lovable-uploads/everest-tutoring-logo.png"
+                src="/lovable-uploads/97ba3476-314d-480b-a161-be6fbd5ec608.png"
                 alt="Everest Tutoring"
-                className="h-24 w-auto object-contain max-w-full"
+                className="h-32 w-auto object-contain max-w-full"
               />
             </div>
             <div>
