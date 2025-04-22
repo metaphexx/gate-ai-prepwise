@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -43,7 +44,7 @@ const Login = () => {
           <div className="text-center space-y-6">
             <div className="w-full flex justify-center bg-white p-4 rounded-lg shadow-sm">
               <img
-                src="/lovable-uploads/de280e0e-7075-433c-9dfd-c46dab821654.png"
+                src="/lovable-uploads/dc655dee-f84f-4553-865c-e1dd445b7ba1.png"
                 alt="Everest Tutoring"
                 className="h-20 w-auto object-contain"
                 onError={(e) => {
