@@ -90,7 +90,7 @@ const Login = () => {
                   id="email"
                   type="email"
                   placeholder="Enter your email"
-                  className="pl-10"
+                  className="pl-10 h-12 border-muted-foreground/20 bg-background rounded-md"
                   required
                 />
               </div>
@@ -117,7 +117,7 @@ const Login = () => {
                   id="password"
                   type={showPassword ? "text" : "password"}
                   placeholder="Enter your password"
-                  className="pl-10 pr-10"
+                  className="pl-10 pr-10 h-12 border-muted-foreground/20 bg-background rounded-md"
                   required
                 />
                 <button
