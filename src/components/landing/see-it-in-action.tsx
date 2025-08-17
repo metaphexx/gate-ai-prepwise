@@ -20,33 +20,33 @@ const SeeItInAction = () => {
               
               <div className="bg-white rounded-xl p-6 shadow-md">
                 <div className="space-y-6">
-                  <div className="flex items-center">
-                    <div className="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center mr-4 font-semibold">
+                  <div className="flex items-start">
+                    <div className="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center mr-3 md:mr-4 font-semibold flex-shrink-0">
                       1
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800">Written Text Submitted</h3>
-                      <p className="text-gray-600">Writing Analysed & Marked </p>
+                      <h3 className="font-semibold text-gray-800 text-sm md:text-base">Written Text Submitted</h3>
+                      <p className="text-gray-600 text-sm">Writing Analysed & Marked </p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center">
-                    <div className="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center mr-4 font-semibold">
+                  <div className="flex items-start">
+                    <div className="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center mr-3 md:mr-4 font-semibold flex-shrink-0">
                       2
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800">AI Feedback</h3>
-                      <p className="text-gray-600">Mistakes & Improvements identified</p>
+                      <h3 className="font-semibold text-gray-800 text-sm md:text-base">AI Feedback</h3>
+                      <p className="text-gray-600 text-sm">Mistakes & Improvements identified</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center">
-                    <div className="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center mr-4 font-semibold">
+                  <div className="flex items-start">
+                    <div className="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center mr-3 md:mr-4 font-semibold flex-shrink-0">
                       3
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800">AI Rewritten Text & Exemplar Text</h3>
-                      <p className="text-gray-600">View your own text rewritten & how an expert writes a response!</p>
+                      <h3 className="font-semibold text-gray-800 text-sm md:text-base">AI Rewritten Text & Exemplar Text</h3>
+                      <p className="text-gray-600 text-sm">View your own text rewritten & how an expert writes a response!</p>
                     </div>
                   </div>
                 </div>
