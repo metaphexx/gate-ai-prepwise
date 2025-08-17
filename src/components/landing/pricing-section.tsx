@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Check, X } from 'lucide-react';
 import CTAButton from '../ui-custom/cta-button';
 import { Card, CardContent } from '../ui/card';
 
 const PricingSection = () => {
+  const navigate = useNavigate();
+  
   return (
     <section id="pricing" className="py-20 bg-[#009dff]">
       <div className="container mx-auto px-4">
@@ -53,7 +56,7 @@ const PricingSection = () => {
                 </ul>
               </div>
               
-              <CTAButton className="w-full">Start Free</CTAButton>
+              <CTAButton className="w-full" onClick={() => navigate('/signup')}>Start Free</CTAButton>
             </div>
           </Card>
           
@@ -104,6 +107,7 @@ const PricingSection = () => {
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                   variant="primary"
                   rainbowBorder={false}
+                  onClick={() => navigate('/signup?plan=premium')}
                 >
                   Go Premium
                 </CTAButton>

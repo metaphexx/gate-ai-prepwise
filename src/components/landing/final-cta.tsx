@@ -1,8 +1,11 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import CTAButton from '../ui-custom/cta-button';
 
 const FinalCta = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className="py-20 bg-[#009dff] text-white">
       <div className="container mx-auto px-4 text-center">
@@ -16,12 +19,7 @@ const FinalCta = () => {
           <CTAButton 
             size="lg" 
             className="mx-auto"
-            onClick={() => {
-              const element = document.getElementById('pricing');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+            onClick={() => navigate('/signup')}
           >
             Start For Free
           </CTAButton>
@@ -29,12 +27,7 @@ const FinalCta = () => {
             variant="secondary" 
             size="lg" 
             className="mx-auto bg-white"
-            onClick={() => {
-              const element = document.getElementById('pricing');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+            onClick={() => navigate('/signup')}
           >
             View Premium Plans
           </CTAButton>

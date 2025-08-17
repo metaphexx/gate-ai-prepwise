@@ -1,9 +1,12 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import CTAButton from '../ui-custom/cta-button';
 import { ArrowRight, Brain } from 'lucide-react';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+  
   const scrollToElement = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -25,7 +28,7 @@ const HeroSection = () => {
             <CTAButton 
               size="lg" 
               rainbowBorder={false}
-              onClick={() => scrollToElement('pricing')}
+              onClick={() => navigate('/signup')}
             >
               Start For Free
               <span className="block text-xs mt-1 opacity-80">No credit card required</span>
