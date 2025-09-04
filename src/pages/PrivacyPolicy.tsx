@@ -8,10 +8,10 @@ const PrivacyPolicy = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-20">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-background to-muted">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
-          <p className="text-xl mb-2">Last updated: 04/09/2025</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Privacy Policy</h1>
+          <p className="text-xl mb-2 text-muted-foreground">Last updated: 04/09/2025</p>
         </div>
       </section>
 
