@@ -126,8 +126,8 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
-  // Create duplicated testimonials for seamless infinite scroll
-  const duplicatedTestimonials = [...testimonials, ...testimonials];
+  // Create tripled testimonials for seamless infinite scroll
+  const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
   return (
     <section className="py-20 bg-white">
