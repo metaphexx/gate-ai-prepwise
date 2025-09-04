@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Star } from 'lucide-react';
 import CTAButton from '../ui-custom/cta-button';
 
@@ -126,8 +126,40 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
-  // Create tripled testimonials for seamless infinite scroll
-  const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
+  // Create duplicated testimonials for seamless infinite scroll
+  const duplicatedTestimonials = [...testimonials, ...testimonials];
+  const [translateX, setTranslateX] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    if (isPaused) return;
+    
+    const animateScroll = () => {
+      setTranslateX((prev) => {
+        const cardWidth = 320; // w-80 (320px) + mx-3 (24px) = 344px total per card
+        const totalCards = testimonials.length;
+        const singleSetWidth = cardWidth * totalCards;
+        
+        // Move by 0.5px per frame for smooth animation
+        const newTranslateX = prev - 0.5;
+        
+        // Reset when we've scrolled one full set
+        if (Math.abs(newTranslateX) >= singleSetWidth) {
+          return 0;
+        }
+        
+        return newTranslateX;
+      });
+    };
+    
+    const intervalId = setInterval(animateScroll, 16); // ~60fps
+    
+    return () => clearInterval(intervalId);
+  }, [isPaused]);
+  
+  const handleMouseEnter = () => setIsPaused(true);
+  const handleMouseLeave = () => setIsPaused(false);
 
   return (
     <section className="py-20 bg-white">
@@ -142,7 +174,16 @@ const TestimonialsSection = () => {
         </div>
         
         <div className="relative overflow-hidden">
-          <div className="flex animate-scroll-left hover:pause-animation py-6">
+          <div 
+            ref={containerRef}
+            className="flex py-6 transition-transform ease-linear"
+            style={{ 
+              transform: `translateX(${translateX}px)`,
+              willChange: 'transform'
+            }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             {duplicatedTestimonials.map((testimonial, index) => (
               <div 
                 key={index} 
