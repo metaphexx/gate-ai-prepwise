@@ -18,7 +18,8 @@ const FinalCta = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <CTAButton 
             size="lg" 
-            className="mx-auto !bg-slate-800 hover:!bg-slate-700"
+            className="mx-auto"
+            rainbowBorder={true}
             onClick={() => navigate('/signup')}
           >
             Start For Free
