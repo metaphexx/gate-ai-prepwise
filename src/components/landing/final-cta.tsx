@@ -18,7 +18,7 @@ const FinalCta = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <CTAButton 
             size="lg" 
-            className="mx-auto bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+            className="mx-auto bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
             onClick={() => navigate('/signup')}
           >
             Start For Free
