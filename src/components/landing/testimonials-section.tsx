@@ -54,7 +54,7 @@ const testimonials = [
   {
     name: "Amir",
     role: "Parent (Yr 4 Student)",
-    comment: "The adaptive question selection is brilliant - it always challenges my son at just the right level.",
+    comment: "The AI feedback is incredible - it helps my son understand exactly what he needs to improve after each practice session.",
     stars: 5
   },
   {
