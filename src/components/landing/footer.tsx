@@ -31,9 +31,9 @@ const Footer = () => {
               © {new Date().getFullYear()} Everest Tutoring. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-everest-blue transition-colors">
+              <Link to="/privacy-policy" className="text-gray-400 hover:text-everest-blue transition-colors">
                 Privacy Policy
-              </a>
+              </Link>
               <Link to="/terms-of-service" className="text-gray-400 hover:text-everest-blue transition-colors">
                 Terms of Service
               </Link>
