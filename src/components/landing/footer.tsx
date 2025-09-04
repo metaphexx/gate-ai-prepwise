@@ -18,9 +18,9 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm">
-              <li>Perth, Western Australia</li>
-              <li>contact@everestgate.com.au</li>
-              <li>+61 8 1234 5678</li>
+              <li>3/723 Ranford Road, Harrisdale, WA 6155, Australia</li>
+              <li>info@everesttutoring.com.au</li>
+              <li>+61 404 604 673</li>
             </ul>
           </div>
         </div>
