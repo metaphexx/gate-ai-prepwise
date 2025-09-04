@@ -43,7 +43,7 @@ const ExamSimulationSection = () => {
               <div className="flex items-start">
                 <Target className="text-everest-blue h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
                 <p className="text-blue-800 text-sm">
-                  <span className="font-medium">Bonus:</span> Get feedback within seconds — no manual marking required.
+                  <span className="font-medium">Bonus:</span> Complete performance analysis available immediately after each mock exam — know exactly where you stand.
                 </p>
               </div>
             </div>
