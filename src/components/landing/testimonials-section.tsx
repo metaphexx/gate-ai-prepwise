@@ -142,7 +142,7 @@ const TestimonialsSection = () => {
         </div>
         
         <div className="relative overflow-hidden">
-          <div className="flex animate-scroll-left hover:pause-animation">
+          <div className="flex animate-scroll-left hover:pause-animation py-6">
             {duplicatedTestimonials.map((testimonial, index) => (
               <div 
                 key={index} 
