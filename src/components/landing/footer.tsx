@@ -5,7 +5,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Everest GATE</h3>
+            <h3 className="text-white text-lg font-semibold mb-4">Everest GATE AI Online Question Bank</h3>
             <p className="mb-4 text-sm">The AI-powered GATE exam preparation platform built by 99+ ATAR WA Tutors</p>
           </div>
           <div>
